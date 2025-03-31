@@ -12,8 +12,12 @@ Esimerkkituloste:
 */
 
 let description = " JavaScript is Fun and powerful! ";
-let clearAndSmallDescription = description.trim().toLowerCase();
-let newDescription = clearAndSmallDescription.replace("powerful", "amazing");
+let clearSmallReplaceDescription = description
+  .trim()
+  .toLowerCase()
+  .replace("powerful", "amazing");
 
-console.log(`Final description: ${newDescription}\n`);
-console.log(`Does it include 'fun'? ${newDescription.includes("fun")}`);
+console.log(`Final description: ${clearSmallReplaceDescription}\n`);
+console.log(
+  `Does it include 'fun'? ${clearSmallReplaceDescription.includes("fun")}`
+);
