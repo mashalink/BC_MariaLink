@@ -1,0 +1,1 @@
+// sama kuin 10
