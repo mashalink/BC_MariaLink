@@ -6,12 +6,8 @@ Muussa tapauksessa palauta "Ei havaittu kettua!"
 Kutsu funktiota arvoilla true ja false ja tulosta tulos.
 */
 
-const checkForFox = (hasFox) => {
-  if (hasFox === true) {
-    return "Sinulla on lemmikkikettu!";
-  }
-  return "Ei havaittu kettua!";
-};
+const checkForFox = (hasFox) =>
+  hasFox ? "Sinulla on lemmikkikettu!" : "Ei havaittu kettua!";
 
 console.log(checkForFox(true));
 console.log(checkForFox(false));

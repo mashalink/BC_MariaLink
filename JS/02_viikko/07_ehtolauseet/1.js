@@ -6,11 +6,6 @@ Muussa tapauksessa älä palauta mitään.
 Kutsu funktiota eri ikäarvoilla ja tulosta tulos.
 */
 
-const checkAdult = (age) => {
-  if (age >= 18) {
-    return "Olet aikuinen.";
-  }
-  return "";
-};
+const checkAdult = (age) => (age >= 18 ? "Olet aikuinen." : "");
 
 console.log(checkAdult(Math.floor(Math.random() * 110)));
