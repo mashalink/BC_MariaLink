@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: bisque;
+}
+
+header {
+  background: #333;
+  padding: 25px;
+  color: white;
+}
+main {
+  padding: 10px;
+}
+
+div {
+  background: blue;
+  height: 200px;
+  width: 200px;
+  margin: 0 10px 10px 0;
+  display: inline-block;
+}
+
+.box1 {
+  border: 5px dotted white;
+  border-radius: 50%;
+}
+
+.box2 {
+  border: 7px double seagreen;
+  border-radius: 20px 50px 20px 50px;
+  background-color: cornflowerblue;
+}
+
+.box3 {
+  border-radius: 50%;
+  border-style: groove;
+  border-width: 10px;
+  border-color: white blue red yellow;
+}
