@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+body {
+  background-color: beige;
+}
+h1 {
+  font-family: "Abril Fatface", serif;
+  color: rgb(56, 56, 2);
+}
+
+h2 {
+  font-family: "Abril Fatface", serif;
+  color: rgb(91, 91, 36);
+}
+
+p {
+  font-family: "Chakra Petch", serif;
+  color: rgb(100, 100, 24);
+}
+
+.gradient-box {
+  background: linear-gradient(to right, #ebecd7, #e4de99);
+}
