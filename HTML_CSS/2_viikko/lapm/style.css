@@ -1,0 +1,18 @@
+body {
+  background-color: rgb(243, 235, 251);
+}
+
+img {
+  margin: 0;
+  padding: 0;
+  border-width: 0px;
+  background-color: rgb(210, 237, 237);
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  border-width: 0px;
+  background-color: rgb(210, 126, 126);
+  font-family: "Courier New", Courier, monospace;
+}
