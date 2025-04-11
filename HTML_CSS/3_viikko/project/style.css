@@ -65,7 +65,7 @@ nav > div ul li a {
 }
 
 nav > div ul li a:hover {
-  color: #69013b;
+  color: white;
 }
 
 header {
@@ -144,7 +144,8 @@ main {
 
 main h1,
 main h2,
-main h3 {
+main h3,
+main h4 {
   color: #69013b;
 }
 
@@ -230,9 +231,14 @@ footer {
   align-items: center;
   justify-content: center;
   color: #fce0d1;
+  margin: 80px 0 0 0;
+  padding-top: 10px;
 }
 
 footer > div a {
   color: #fce0d1;
   text-decoration: none;
+}
+footer > div p {
+  margin: 10px 0 10px 0;
 }
