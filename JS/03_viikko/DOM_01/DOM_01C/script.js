@@ -6,8 +6,7 @@ Muista lisätä uudelle napille oma id ja sille oma tapahtumankuuntelija. Tee ka
 */
 
 function minusButtom() {
-  document.getElementById("text2").textContent =
-    parseInt(document.getElementById("text2").textContent) - 1;
+  document.getElementById("text2").textContent--;
 }
 
 function changeColorButtom() {

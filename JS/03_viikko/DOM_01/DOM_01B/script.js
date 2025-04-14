@@ -7,6 +7,5 @@ Lisää napille getElementById:n avulla tapahtumakäsittelijä, joka kuuntelee
 */
 
 function addButtom() {
-  document.getElementById("text2").textContent =
-    parseInt(document.getElementById("text2").textContent) + 1;
+  document.getElementById("text2").textContent++;
 }
