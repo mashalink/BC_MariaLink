@@ -8,17 +8,24 @@ Kirjoita JavaScript-koodi, joka:
 */
 
 function addFruitButton() {
-  document.getElementById("addFruitBtn").addEventListener("click", function () {
-    const fruitInput = document.getElementById("fruitInput");
+  const fruitInput = document.getElementById("fruitInput");
 
-    if (fruitInput.value.trim() !== "") {
-      const fruitList = document.getElementById("fruitList");
-      const newFruit = document.createElement("li");
-      newFruit.textContent = fruitInput.value;
-      fruitList.appendChild(newFruit);
-      fruitInput.value = "";
-    }
-  });
+  if (fruitInput.value.trim() !== "") {
+    const fruitList = document.getElementById("fruitList");
+    const newFruit = document.createElement("li");
+    newFruit.textContent = fruitInput.value;
+    fruitList.appendChild(newFruit);
+    fruitInput.value = "";
+  }
 }
 
-addFruitButton();
+document
+  .getElementById("addFruitBtn")
+  .addEventListener("click", addFruitButton);
+document
+  .getElementById("fruitInput")
+  .addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+      addFruitButton();
+    }
+  });

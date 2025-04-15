@@ -4,18 +4,16 @@ Kirjoita JavaScript-koodi, joka vaihtaa tekstiosion näkyvyyttä - päälle ja p
  */
 
 function textOn_Off() {
-  const button = document.getElementById("turnOn_Off");
   const paragraph = document.querySelector("p");
+  const button = document.getElementById("turnOn_Off");
 
-  button.addEventListener("click", function () {
-    if (paragraph.style.display === "none") {
-      paragraph.style.display = "block";
-      button.innerText = "Turn off";
-    } else {
-      paragraph.style.display = "none";
-      button.innerText = "Turn on";
-    }
-  });
+  if (paragraph.style.display === "none") {
+    paragraph.style.display = "block";
+    button.innerText = "Turn off";
+  } else {
+    paragraph.style.display = "none";
+    button.innerText = "Turn on";
+  }
 }
 
-textOn_Off();
+document.getElementById("turnOn_Off").addEventListener("click", textOn_Off);
