@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Box-sizing demo</title>
+    <style>
+      .wrapper {
+        display: flex;
+        gap: 40px;
+        padding: 40px;
+      }
+
+      .box {
+        width: 200px;
+        height: 100px;
+        padding: 20px;
+        border: 5px solid coral;
+        background-color: lightblue;
+        color: black;
+        font-family: sans-serif;
+      }
+
+      .content-box {
+        box-sizing: content-box;
+      }
+
+      .border-box {
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="box content-box">
+        <strong>content-box</strong><br />
+        Фактическая ширина > 200px
+      </div>
+      <div class="box border-box">
+        <strong>border-box</strong><br />
+        Точно 200px шириной
+      </div>
+    </div>
+  </body>
+</html>

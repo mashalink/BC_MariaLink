@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form id="registrationForm" autocomplete="on">
+      <h1>Sign Up</h1>
+      <h3>It's free and only takes a minute</h3>
+
+      <!-- <fieldset>
+        <legend>Personal Information</legend> -->
+
+      <label for="firstName">First name</label>
+      <input
+        type="text"
+        id="firstName"
+        name="firstName"
+        required
+        aria-describedby="firstNameError"
+        placeholder=""
+        autocomplete="given-name"
+      />
+      <div id="firstNameError" class="error"></div>
+
+      <label for="lastName">Last name</label>
+      <input
+        type="text"
+        id="lastName"
+        name="lastName"
+        required
+        aria-describedby="lastNameError"
+        placeholder=""
+        autocomplete="family-name"
+      />
+      <div id="lastNameError" class="error"></div>
+
+      <!-- <fieldset>
+        <legend>Account Details</legend> -->
+
+      <label for="email">Email</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        required
+        aria-describedby="emailError"
+        placeholder=""
+        autocomplete="email"
+      />
+      <div id="emailError" class="error"></div>
+
+      <label for="password">Password</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        required
+        minlength="8"
+        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+        title="The password must contain at least 8 characters, at least one uppercase letter and one digit."
+        aria-describedby="passwordError"
+        placeholder=""
+        autocomplete="new-password"
+      />
+      <div id="passwordError" class="error"></div>
+
+      <label for="confirmPassword">Confirm Password</label>
+      <input
+        type="password"
+        id="confirmPassword"
+        name="confirmPassword"
+        required
+        aria-describedby="confirmPasswordError"
+        placeholder=""
+        autocomplete="new-password"
+      />
+      <div id="confirmPasswordError" class="error"></div>
+
+      <button type="submit">SIGN UP</button>
+      <p class="formP">By clicking the Sign Up button, you are agree to</p>
+      <p class="formP">
+        our
+        <a href="#" onclick="event.preventDefault();">Terms & Conditions</a> and
+        <a href="#" onclick="event.preventDefault();">Privacy Policy</a>
+      </p>
+      <div id="message" class="message"></div>
+    </form>
+    <p id="lastP">
+      Already have an account?
+      <a id="lastA" href="#" onclick="event.preventDefault();">Login here</a>
+    </p>
+  </body>
+</html>
