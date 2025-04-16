@@ -1,3 +1,14 @@
+function showMessage(text, type) {
+  const messageEl = document.getElementById("message");
+  messageEl.textContent = text;
+  messageEl.className = "message " + type;
+  messageEl.style.display = "block";
+
+  setTimeout(() => {
+    messageEl.style.display = "none";
+  }, 5000);
+}
+
 function submitForm() {
   document
     .getElementById("registrationForm")
@@ -62,8 +73,8 @@ function submitForm() {
         formValid = false;
       }
 
-      if (formValid) {
-        alert("Form submitted successfully!");
+      if (formValid && firstName === "Maria") {
+        showMessage("Form submitted successfully!", "success");
         document.getElementById("registrationForm").reset();
         // document.getElementById("registrationForm").submit();
       }
