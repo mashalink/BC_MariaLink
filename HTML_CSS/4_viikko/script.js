@@ -73,7 +73,7 @@ function submitForm() {
         formValid = false;
       }
 
-      if (formValid && firstName === "Maria") {
+      if (formValid) {
         showMessage("Form submitted successfully!", "success");
         document.getElementById("registrationForm").reset();
         // document.getElementById("registrationForm").submit();

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <!-- Login form -->
+    <form id="Login" autocomplete="off">
+      <input
+        type="password"
+        inputmode="numeric"
+        pattern="[0-9]*"
+        id="pin"
+        required
+        aria-describedby="pinError"
+        placeholder="Enter PIN"
+      />
+      <div id="pinError" class="error"></div>
+
+      <button id="buttonLogin" type="submit">Login</button>
+    </form>
+
+    <!-- Balance display -->
+    <div class="showBalance">
+      <h2 id="showHeader"></h2>
+      <h1 id="showBalance"></h1>
+    </div>
+
+    <!-- Deposit and Withdraw -->
+    <form autocomplete="off">
+      <label for="balance">Balance</label>
+      <input
+        type="text"
+        inputmode="numeric"
+        pattern="[0-9]*"
+        id="balance"
+        required
+        aria-describedby="BalanceError"
+        placeholder="Enter amount"
+      />
+      <div id="errorBalance" class="error"></div>
+      <button id="buttonDeposit" type="button">Deposit</button>
+
+      <label for="withdraw">Withdraw</label>
+      <input
+        type="text"
+        inputmode="numeric"
+        pattern="[0-9]*"
+        id="withdraw"
+        required
+        aria-describedby="withdrawError"
+        placeholder="Enter amount"
+      />
+      <div id="errorWithdraw" class="error"></div>
+      <button id="buttonWithdraw" type="button">Withdraw</button>
+    </form>
+  </body>
+</html>

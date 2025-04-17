@@ -14,13 +14,13 @@
   font-size: 16px;
 
   /* Colors */
-  --clr-white: #ffffff;
-  --clr-primary: #fb7f50;
-  --clr-primary-2: hsl(14, 100%, 60%);
-  --clr-bg: #236747;
-  --clr-light-gray: rgb(128, 128, 128);
-  --clr-border: rgb(198, 198, 198);
-  --clr-dark-text: rgb(84, 84, 84);
+  --clr-bg: #fff9c4; /* Light pastel yellow for the background */
+  --clr-primary: #4caf50; /* Slightly cooler and brighter green */
+  --clr-primary-2: #388e3c; /* Darker green for hover effect */
+  --clr-error: #ff7369; /* Soft red for error messages */
+  --clr-light-gray: #b0b0b0; /* Light gray text */
+  --clr-border: #e1e9e1; /* Pale green for borders */
+  --clr-dark-text: #4a4a4a; /* Dark gray text for readability */
 
   /* Fonts */
   --ff-heading: "Poppins", sans-serif;
@@ -49,18 +49,13 @@ form {
   padding: 0.75rem;
 }
 
-h1,
-h3 {
+.showBalance > h1,
+h2 {
+  color: var(--clr-primary-2);
   font-family: var(--ff-heading);
   font-weight: normal;
   text-align: center;
   margin-top: 0.75rem;
-}
-
-p,
-input,
-label {
-  font-family: var(--ff-body);
 }
 
 label {
@@ -98,56 +93,8 @@ button:hover {
   cursor: pointer;
 }
 
-.footerForm {
-  color: var(--clr-dark-text);
-  text-align: center;
-  margin: 0 1.25rem;
-  font-size: 0.875rem;
-}
-
-a {
-  color: var(--clr-primary);
-  font-size: 0.875rem;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-#footer {
-  margin-top: 1.25rem;
-  color: var(--clr-white);
-  font-size: 1rem;
-}
-
-#footerLink {
-  color: var(--clr-primary);
-  font-size: 1rem;
-}
-
 .error {
-  color: var(--clr-primary);
+  color: var(--clr-error);
   font-size: 0.875rem;
   margin: 0.3125rem 0 0 1.25rem;
-}
-
-.message {
-  padding: 0.5rem 1rem;
-  border-radius: 0.625rem;
-  display: none;
-  animation: fadeIn 0.5s ease-in-out;
-  margin: 0.1rem 1.25rem;
-}
-
-.message.success {
-  background-color: var(--clr-white);
-  border: 1px solid var(--clr-bg);
-  color: var(--clr-bg);
-}
-
-.message.error {
-  background-color: var(--clr-white);
-  border: 1px solid var(--clr-primary);
-  color: var(--clr-primary);
 }
