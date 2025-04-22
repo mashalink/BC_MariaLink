@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Order Pancake</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="image-container">
+        <img src="pancake.jpeg" alt="Delicious pancakes" />
+        <div class="price-banner"><span id="totalPrice">5€</span></div>
+      </div>
+
+      <div class="form-container">
+        <h2>Customize Your Pancake</h2>
+
+        <label for="type">Choose pancake type:</label>
+        <select id="type">
+          <option value="5">Classic - 5€</option>
+          <option value="6">Banana - 6€</option>
+          <option value="6">Chocolate - 6€</option>
+          <option value="7">Blueberry - 7€</option>
+        </select>
+
+        <h3>Choose toppings:</h3>
+        <label
+          ><input type="checkbox" class="topping" value="1" /> Maple syrup
+          1€</label
+        >
+        <label
+          ><input type="checkbox" class="topping" value="1" /> Chocolate
+          1€</label
+        >
+        <label
+          ><input type="checkbox" class="topping" value="1" /> Raspberry jam
+          1€</label
+        >
+        <label
+          ><input type="checkbox" class="topping" value="1" /> Strawberry jam
+          1€</label
+        >
+        <label
+          ><input type="checkbox" class="topping" value="1" /> Blueberry jam
+          1€</label
+        >
+        <label
+          ><input type="checkbox" class="topping" value="1" /> Lingonberry jam
+          1€</label
+        >
+
+        <h3>Choose extras:</h3>
+        <label
+          ><input type="checkbox" class="extra" value="1" /> Banana 1€</label
+        >
+        <label
+          ><input type="checkbox" class="extra" value="2" /> Strawberry
+          2€</label
+        >
+        <label
+          ><input type="checkbox" class="extra" value="2" /> Blueberry 2€</label
+        >
+        <label
+          ><input type="checkbox" class="extra" value="3" /> Raspberry 3€</label
+        >
+        <label
+          ><input type="checkbox" class="extra" value="2" /> Whipped cream
+          2€</label
+        >
+        <label
+          ><input type="checkbox" class="extra" value="3" /> Ice cream 3€</label
+        >
+
+        <h3>Total price: <span id="totalPriceDisplay">5€</span></h3>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
