@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Collapsing Margins</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 40px;
+      }
+
+      .para1 {
+        background: #d1e7dd;
+        margin-bottom: 40px;
+        padding: 10px;
+      }
+
+      .para2 {
+        background: #f8d7da;
+        margin-top: 30px;
+        padding: 10px;
+      }
+
+      .container {
+        border: 2px dashed #ccc;
+        padding: 20px;
+        margin-top: 50px;
+      }
+
+      .inner1 {
+        background: #cff4fc;
+        margin-bottom: 50px;
+        padding: 10px;
+      }
+
+      .inner2 {
+        background: #fff3cd;
+        margin-top: 60px;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Пример Collapsing Margins</h2>
+
+    <p class="para1">Параграф 1 с отступом снизу 40px</p>
+    <p class="para2">Параграф 2 с отступом сверху 30px</p>
+    <p>⬆ Вместо 70px между ними, будет всего 40px (самый большой отступ)</p>
+
+    <div class="container">
+      <div class="inner1">Вложенный блок 1 (margin-bottom: 50px)</div>
+      <div class="inner2">Вложенный блок 2 (margin-top: 60px)</div>
+      <p>⬆ Здесь тоже будет только 60</p>
+    </div>
+  </body>
+</html>

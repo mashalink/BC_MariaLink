@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pseudo-classes Example</title>
+    <style>
+      ul {
+        padding: 0;
+        list-style: none;
+      }
+
+      li {
+        padding: 10px;
+        margin: 5px 0;
+        background: #ddd;
+      }
+
+      /* Псевдоклассы для конкретных позиций */
+      li:first-child {
+        background-color: lightgreen;
+      }
+
+      li:last-child {
+        background-color: lightcoral;
+      }
+
+      li:only-child {
+        border: 2px dashed red;
+      }
+
+      li:nth-child(even) {
+        font-weight: bold;
+      }
+
+      li:nth-child(3n + 2) {
+        background-color: lightblue;
+      }
+
+      li:nth-of-type(4) {
+        border: 2px solid orange;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Список с применением псевдоклассов</h2>
+    <ul>
+      <li>Элемент 1</li>
+      <li>Элемент 2</li>
+      <li>Элемент 3</li>
+      <li>Элемент 4</li>
+      <li>Элемент 5</li>
+      <li>Элемент 6</li>
+      <li>Элемент 7</li>
+    </ul>
+
+    <h2>Список с одним элементом</h2>
+    <ul>
+      <li>Я один</li>
+    </ul>
+  </body>
+</html>

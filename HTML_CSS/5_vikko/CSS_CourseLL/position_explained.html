@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Позиционирование</title>
+    <style>
+      body {
+        height: 2000px; /* Чтобы было видно скролл */
+        padding: 20px;
+      }
+
+      .box {
+        width: 200px;
+        height: 80px;
+        margin: 10px;
+        padding: 10px;
+        color: white;
+        font-weight: bold;
+      }
+
+      .static {
+        background-color: gray;
+      }
+
+      .relative {
+        position: relative;
+        top: 20px;
+        left: 20px;
+        background-color: orange;
+      }
+
+      .sticky {
+        position: sticky;
+        top: 0;
+        background-color: purple;
+      }
+
+      .absolute-container {
+        position: relative;
+        height: 150px;
+        background-color: #eee;
+        margin-top: 30px;
+      }
+
+      .absolute {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: red;
+      }
+
+      .fixed {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box static">Static (по умолчанию)</div>
+
+    <div class="box relative">Relative (сдвинуто)</div>
+
+    <div class="box sticky">Sticky (прилипает сверху)</div>
+
+    <div class="absolute-container">
+      <div class="box absolute">Absolute (внутри блока)</div>
+    </div>
+
+    <div class="box fixed">Fixed (в углу экрана)</div>
+  </body>
+</html>

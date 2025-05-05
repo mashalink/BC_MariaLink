@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Container Queries</title>
+    <style>
+      /* 1. Устанавливаем контейнер */
+      .card-container {
+        container-type: inline-size;
+        border: 2px dashed #ccc;
+        padding: 1rem;
+        margin-bottom: 2rem;
+      }
+
+      .card {
+        background: lightgray;
+        padding: 1rem;
+        font-size: 1rem;
+        text-align: center;
+      }
+
+      /* 2. Стили по размеру контейнера */
+      @container (min-width: 400px) {
+        .card {
+          background: lightblue;
+          font-size: 1.2rem;
+          text-align: left;
+        }
+      }
+
+      @container (min-width: 600px) {
+        .card {
+          background: lightgreen;
+          display: flex;
+          justify-content: space-between;
+          font-size: 1.4rem;
+        }
+      }
+
+      /* Доп. стили для примера */
+      .wrapper {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .card-container {
+        flex: 1 1 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>📐 Пример с Container Queries</h2>
+    <p>Карточки адаптируются не к экрану, а к своему контейнеру 👇</p>
+
+    <div class="wrapper">
+      <div class="card-container">
+        <div class="card">Карточка 1</div>
+      </div>
+      <div class="card-container">
+        <div class="card">Карточка 2</div>
+      </div>
+      <div class="card-container">
+        <div class="card">Карточка 3</div>
+      </div>
+    </div>
+  </body>
+</html>

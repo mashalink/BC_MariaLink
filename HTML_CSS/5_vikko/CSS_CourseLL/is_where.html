@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>:is vs :where</title>
+    <style>
+      /* Основной стиль */
+      .btn {
+        background: gray;
+        color: white;
+        padding: 10px;
+        display: inline-block;
+      }
+
+      /* Используем :is() — специфичность высокая */
+      :is(.btn, .link) {
+        background: green;
+      }
+
+      /* Используем :where() — специфичность нулевая */
+      :where(.btn, .link) {
+        color: blue;
+      }
+
+      /* Стиль с большей специфичностью */
+      .btn.override {
+        background: red;
+        color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Пример :is() и :where()</h2>
+
+    <div class="btn">Обычная кнопка</div>
+    <div class="btn override">Кнопка с override</div>
+    <div class="link">Ссылка-стиль</div>
+  </body>
+</html>
