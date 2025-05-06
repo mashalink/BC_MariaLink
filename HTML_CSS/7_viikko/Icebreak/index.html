@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kaksi totuutta ja yksi valhe</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="container" id="player-form">
+      <h1>Kaksi totuutta ja yksi valhe</h1>
+      <h2>Osallistuja <span id="player-number">1</span></h2>
+
+      <label for="player-name">Nimi:</label>
+      <input type="text" id="player-name" />
+
+      <div class="claim-block">
+        <label for="claim1">Väite 1:</label>
+        <input type="text" id="claim1" />
+        <label class="truth-check"
+          ><input type="checkbox" id="truth1" /> Tämä on totta</label
+        >
+      </div>
+
+      <div class="claim-block">
+        <label for="claim2">Väite 2:</label>
+        <input type="text" id="claim2" />
+        <label class="truth-check"
+          ><input type="checkbox" id="truth2" /> Tämä on totta</label
+        >
+      </div>
+
+      <div class="claim-block">
+        <label for="claim3">Väite 3:</label>
+        <input type="text" id="claim3" />
+        <label class="truth-check"
+          ><input type="checkbox" id="truth3" /> Tämä on totta</label
+        >
+      </div>
+
+      <button onclick="savePlayer()">Tallenna osallistuja</button>
+    </div>
+
+    <div class="container hidden" id="quiz-start">
+      <h2>Kaikki osallistujat lisätty!</h2>
+      <button onclick="startQuiz()">Aloita viktoriina</button>
+    </div>
+
+    <div class="container hidden" id="quiz-container">
+      <h2>Arvaa, mikä väite on valhe!</h2>
+      <p id="quiz-player-name" style="font-weight: bold"></p>
+      <div id="quiz-claims"></div>
+      <p id="quiz-feedback"></p>
+      <button id="next-button" class="hidden" onclick="nextQuiz()">
+        Seuraava
+      </button>
+    </div>
+  </body>
+</html>

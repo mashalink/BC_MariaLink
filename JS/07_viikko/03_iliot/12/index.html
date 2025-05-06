@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee</title>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <h1>Employees</h1>
+    <h2>Add a new employee</h2>
+    <input type="text" id="name" placeholder="Name" />
+    <input type="text" id="position" placeholder="Position" />
+    <input type="number" id="salary" placeholder="Salary" />
+    <button onclick="addEmployees()">Add Item</button>
+
+    <h2>Increase Salary</h2>
+    <input type="number" id="empId" placeholder="Employee ID" />
+    <input type="number" id="procent" placeholder="Percent" />
+    <button onclick="increaseSalary()">Increase Salary</button>
+
+    <div id="listEmployees"></div>
+  </body>
+</html>

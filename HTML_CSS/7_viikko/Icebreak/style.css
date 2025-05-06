@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(to right, #f0f4ff, #e8f0fe);
+  color: #333;
+  padding: 20px;
+  margin: 0;
+}
+h1,
+h2 {
+  text-align: center;
+  color: #2c3e50;
+}
+.container {
+  max-width: 600px;
+  margin: auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 5px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+.claim-block {
+  margin-bottom: 20px;
+}
+.truth-check {
+  margin-top: 5px;
+}
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+button {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+button:hover {
+  background-color: #357ab7;
+}
+.hidden {
+  display: none;
+}
+.claim-button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: 2px solid #ccc;
+  background: #f9f9f9;
+  border-radius: 8px;
+  transition: background 0.3s, border-color 0.3s;
+  cursor: pointer;
+}
+.claim-button.correct {
+  background: #d4edda;
+  border-color: #28a745;
+  color: #155724;
+}
+.claim-button.wrong {
+  background: #f8d7da;
+  border-color: #dc3545;
+  color: #721c24;
+}
+#quiz-feedback {
+  margin-top: 15px;
+  font-size: 18px;
+}
