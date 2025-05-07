@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pikku Eläintarha</title>
+    <link rel="icon" href="./image/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Pikku Eläintarha</h1>
+
+      <!-- Haku ja suodatus osio -->
+      <div class="controls">
+        <input type="text" id="searchAnimal" placeholder="Etsi nimellä..." />
+        <select id="filterType">
+          <!-- <option value="Kaikki">Kaikki eläimet</option>
+          <option value="Nisäkäs">Nisäkkäät</option>
+          <option value="Lintu">Linnut</option>
+          <option value="Matelija">Matelijat</option>
+          <option value="Sammakkoeläin">Sammakkoeläimet</option>
+          <option value="Kala">Kalat</option> -->
+        </select>
+        <button onclick="sortAnimals()">Järjestä A-Ö</button>
+      </div>
+
+      <!-- Eläinten listanäkymä -->
+      <ul id="animalList"></ul>
+
+      <!-- Uuden eläimen lisääminen -->
+      <div class="add-animal">
+        <h2>Lisää uusi eläin</h2>
+        <input type="text" id="newAnimalName" placeholder="Eläimen nimi" />
+        <select id="newAnimalType">
+          <!-- <option value="Nisäkäs">Nisäkäs</option>
+          <option value="Lintu">Lintu</option>
+          <option value="Matelija">Matelija</option>
+          <option value="Sammakkoeläin">Sammakkoeläin</option>
+          <option value="Kala">Kala</option> -->
+        </select>
+        <button onclick="addAnimal()">Lisää eläin</button>
+      </div>
+
+      <!-- Uutta Type -->
+      <div class="add-type">
+        <h2>Lisää uusi type</h2>
+        <input type="text" id="newType" placeholder="Eläimen tyyppi" />
+        <input type="text" id="newTypes" placeholder="Eläinten tyypit" />
+        <button onclick="addType()">Lisää eläin</button>
+      </div>
+    </div>
+  </body>
+</html>
