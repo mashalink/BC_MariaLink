@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Magic Ball</title>
+    <link rel="stylesheet" href="8_ball.css" />
+    <script src="8_ball.js" defer></script>
+  </head>
+  <body>
+    <h1>Magic Ball 🔮</h1>
+    <p>Ask a question and reveal your destiny!</p>
+    <div id="question">
+      <input
+        type="text"
+        id="userQuestion"
+        placeholder="Enter your question..."
+      />
+    </div>
+    <div id="ball" onclick="magicBall()">
+      <div id="answer">🔮</div>
+    </div>
+  </body>
+</html>
