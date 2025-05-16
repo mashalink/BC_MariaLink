@@ -44,12 +44,10 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  padding: 20px;
+  cursor: pointer;
   box-shadow: 0 0 40px rgba(128, 0, 255, 0.8),
     0 0 30px rgba(255, 255, 255, 0.1) inset;
-  cursor: pointer;
-  transition: transform 0.3s;
+  position: relative;
 }
 
 #ball:hover {
@@ -59,11 +57,55 @@ p {
 @keyframes idle {
   0%,
   100% {
-    transform: rotate(-2deg);
+    transform: rotate(-10deg);
   }
   50% {
-    transform: rotate(2deg);
+    transform: rotate(10deg);
   }
+}
+
+#centerCircle {
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(
+    circle at center,
+    rgba(190, 140, 255, 0.9) 0%,
+    rgba(128, 0, 255, 0.5) 70%,
+    rgba(60, 0, 110, 0.4) 100%
+  );
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 0 25px rgba(190, 140, 255, 0.8), 0 0 40px rgba(128, 0, 255, 0.6),
+    inset 0 0 20px rgba(255, 255, 255, 0.1),
+    inset 0 0 10px rgba(255, 255, 255, 0.2);
+  color: #fff;
+  user-select: none;
+  transition: font-size 0.5s ease;
+  white-space: normal;
+  line-height: 1.2;
+  backdrop-filter: blur(2px);
+}
+
+#answer {
+  font-size: 2rem;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  text-align: center;
+}
+
+#answer.visible {
+  font-size: 2rem;
+  opacity: 1;
+}
+
+#answer.eightMode {
+  font-size: 6rem;
 }
 
 @keyframes shake {
@@ -100,18 +142,4 @@ p {
   100% {
     transform: translate(1px, -2px) rotate(-1deg);
   }
-}
-
-#answer {
-  font-size: 1.8rem;
-  color: white;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 2s ease, transform 2s ease;
-  text-align: center;
-}
-
-#answer.visible {
-  opacity: 1;
-  transform: translateY(0);
 }

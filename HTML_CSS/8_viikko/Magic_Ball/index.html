@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Magic Ball</title>
-    <link rel="stylesheet" href="8_ball.css" />
-    <script src="8_ball.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
     <h1>Magic Ball 🔮</h1>
@@ -18,7 +18,10 @@
       />
     </div>
     <div id="ball" onclick="magicBall()">
-      <div id="answer">🔮</div>
+      <div id="centerCircle">
+        <div id="answer" class="visible eightMode">8</div>
+      </div>
     </div>
   </body>
 </html>
+<!DOCTYPE html>

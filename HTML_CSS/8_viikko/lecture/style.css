@@ -1,0 +1,55 @@
+body {
+  background: cornsilk;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: white;
+}
+
+.round {
+  margin: 50px auto;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: steelblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 10px #333, 0 0 6px #333 inset;
+  transition: height 3s 1s ease-in, width 3s ease-out;
+}
+
+.round:hover {
+  height: 400px;
+  width: 400px;
+}
+
+.cat {
+  margin: 100px auto;
+  width: 250px;
+  height: 200px;
+  display: flex;
+  align-self: center;
+  transition: height 2s 1s ease-in-out;
+}
+
+.cat:hover {
+  height: 400px;
+}
+
+.squere {
+  margin: 50px auto;
+  width: 100px;
+  height: 100px;
+  background: teal;
+  border-bottom: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 1s ease-in-out, background 0.5s;
+  transform-style: preserve-3d;
+}
+
+.squere:hover {
+  transform: rotate(180deg);
+  background: steelblue;
+}
