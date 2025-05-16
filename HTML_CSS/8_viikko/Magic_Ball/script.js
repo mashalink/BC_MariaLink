@@ -47,7 +47,7 @@ function magicBall() {
       centerCircle.classList.add("answer");
 
       if (!input) {
-        answerDiv.textContent = "Please ask a question!";
+        answerDiv.textContent = "Please, ask a question!";
       } else {
         const index = Math.floor(Math.random() * answers.length);
         answerDiv.textContent = answers[index];
