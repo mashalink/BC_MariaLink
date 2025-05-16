@@ -1,19 +1,19 @@
-const form = document.querySelector("form");
+const formContainer = document.querySelector(".form-container");
 const totalPriceDisplay = document.getElementById("totalPriceDisplay");
 const totalPrice = document.getElementById("totalPrice");
-const pancakeType = document.getElementById("type");
+const pancakeType = formContainer.querySelector("#type");
 const showSummaryButton = document.getElementById("showSummaryButton");
 
 let selectedToppings = [];
 let selectedExtras = [];
 let deliveryPrice = 0;
 
-function handleInputChange(inputEvent) {
-  const target = inputEvent.target;
+function handleInputChange(event) {
+  const target = event.target;
 
   if (target.classList.contains("topping")) {
     if (target.checked) {
-      selectedToppings.push(target); // Store the actual checkbox element
+      selectedToppings.push(target);
     } else {
       selectedToppings = selectedToppings.filter(
         (checkbox) => checkbox !== target
@@ -23,7 +23,7 @@ function handleInputChange(inputEvent) {
 
   if (target.classList.contains("extra")) {
     if (target.checked) {
-      selectedExtras.push(target); // Store the actual checkbox element
+      selectedExtras.push(target);
     } else {
       selectedExtras = selectedExtras.filter((checkbox) => checkbox !== target);
     }
@@ -39,28 +39,22 @@ function handleInputChange(inputEvent) {
 function updateTotalPrice() {
   let price = 0;
 
-  // Calculate pancake price
-  const selectedPancake = pancakeType.options[pancakeType.selectedIndex];
-  price += parseFloat(selectedPancake.dataset.price || 0);
+  const selectedPancakeOption = pancakeType.options[pancakeType.selectedIndex];
+  price += parseFloat(selectedPancakeOption.dataset.price || 0);
 
-  // Calculate toppings price
   selectedToppings.forEach((checkbox) => {
     price += parseFloat(checkbox.dataset.price || 0);
   });
 
-  // Calculate extras price
   selectedExtras.forEach((checkbox) => {
     price += parseFloat(checkbox.dataset.price || 0);
   });
 
-  // Add delivery price
   price += deliveryPrice;
 
-  // Update total price display
   totalPriceDisplay.textContent = `${price.toFixed(2)}€`;
   totalPrice.textContent = `${price.toFixed(0)}€`;
 
-  // Animate the price update
   const priceBanner = document.querySelector(".price-banner");
   const priceLine = document.querySelector("#totalPriceDisplay");
   priceBanner.classList.add("animate");
@@ -73,33 +67,37 @@ function updateTotalPrice() {
 }
 
 function showOrderSummary() {
-  const name = document.getElementById("name").value;
-  const selectedPancake = pancakeType.options[pancakeType.selectedIndex];
-  const selectedToppings = Array.from(
-    form.querySelectorAll(".topping:checked")
+  const name = formContainer.querySelector("#name").value;
+  const selectedPancake =
+    pancakeType.options[pancakeType.selectedIndex].textContent;
+
+  const selectedToppingsList = Array.from(
+    formContainer.querySelectorAll(".topping:checked")
   ).map((checkbox) => checkbox.parentElement.textContent.trim());
-  const selectedExtras = Array.from(
-    form.querySelectorAll(".extra:checked")
+
+  const selectedExtrasList = Array.from(
+    formContainer.querySelectorAll(".extra:checked")
   ).map((checkbox) => checkbox.parentElement.textContent.trim());
-  const deliveryMethod = form
+
+  const deliveryMethod = formContainer
     .querySelector("input[name='delivery']:checked")
     ?.parentElement.textContent.trim();
 
   let summaryHTML = `<h3>Order Summary</h3>`;
   summaryHTML += `<p><strong>Customer Name:</strong> ${name}</p>`;
-  summaryHTML += `<p><strong>Pancake Type:</strong> ${selectedPancake.textContent}</p>`;
+  summaryHTML += `<p><strong>Pancake Type:</strong> ${selectedPancake}</p>`;
 
-  if (selectedToppings.length > 0) {
+  if (selectedToppingsList.length > 0) {
     summaryHTML += `<p><strong>Toppings:</strong><ul>`;
-    selectedToppings.forEach((topping) => {
+    selectedToppingsList.forEach((topping) => {
       summaryHTML += `<li>${topping}</li>`;
     });
     summaryHTML += `</ul></p>`;
   }
 
-  if (selectedExtras.length > 0) {
+  if (selectedExtrasList.length > 0) {
     summaryHTML += `<p><strong>Extras:</strong><ul>`;
-    selectedExtras.forEach((extra) => {
+    selectedExtrasList.forEach((extra) => {
       summaryHTML += `<li>${extra}</li>`;
     });
     summaryHTML += `</ul></p>`;
@@ -111,9 +109,65 @@ function showOrderSummary() {
   summaryContainer.innerHTML = summaryHTML;
 }
 
+formContainer.addEventListener("change", handleInputChange);
 showSummaryButton.addEventListener("click", showOrderSummary);
 
-form.addEventListener("change", handleInputChange);
-
-// Initial update of the total price and order summary
 updateTotalPrice();
+
+const modal = document.getElementById("orderModal");
+const orderSummaryModal = document.querySelector(".order-summary-modal");
+const closeModal = document.getElementById("closeModal");
+
+function showOrderSummary() {
+  const name = formContainer.querySelector("#name").value;
+  const selectedPancake =
+    pancakeType.options[pancakeType.selectedIndex].textContent;
+
+  const selectedToppingsList = Array.from(
+    formContainer.querySelectorAll(".topping:checked")
+  ).map((checkbox) => checkbox.parentElement.textContent.trim());
+
+  const selectedExtrasList = Array.from(
+    formContainer.querySelectorAll(".extra:checked")
+  ).map((checkbox) => checkbox.parentElement.textContent.trim());
+
+  const deliveryMethod = formContainer
+    .querySelector("input[name='delivery']:checked")
+    ?.parentElement.textContent.trim();
+
+  let summaryHTML = `<h3>Order Summary</h3>`;
+  summaryHTML += `<p><strong>Customer Name:</strong> ${name}</p>`;
+  summaryHTML += `<p><strong>Pancake Type:</strong> ${selectedPancake}</p>`;
+
+  if (selectedToppingsList.length > 0) {
+    summaryHTML += `<p><strong>Toppings:</strong><ul>`;
+    selectedToppingsList.forEach((topping) => {
+      summaryHTML += `<li>${topping}</li>`;
+    });
+    summaryHTML += `</ul></p>`;
+  }
+
+  if (selectedExtrasList.length > 0) {
+    summaryHTML += `<p><strong>Extras:</strong><ul>`;
+    selectedExtrasList.forEach((extra) => {
+      summaryHTML += `<li>${extra}</li>`;
+    });
+    summaryHTML += `</ul></p>`;
+  }
+
+  summaryHTML += `<p><strong>Delivery Method:</strong> ${deliveryMethod}</p>`;
+
+  orderSummaryModal.innerHTML = summaryHTML;
+
+  modal.classList.remove("hidden");
+}
+
+closeModal.addEventListener("click", () => {
+  modal.classList.add("hidden");
+});
+
+modal.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    modal.classList.add("hidden");
+  }
+});
