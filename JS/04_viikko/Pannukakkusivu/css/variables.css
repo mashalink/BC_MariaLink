@@ -1,0 +1,15 @@
+:root {
+  font-size: 16px;
+
+  --clr-bg: rgb(219, 231, 232);
+  --clr-font: rgb(0, 31, 31);
+  --clr-font_2: rgb(19, 58, 59);
+  --clr-primary: #fb7f50;
+  --clr-primary-2: hsl(14, 100%, 60%);
+  --clr-light-gray: rgb(128, 128, 128);
+  --clr-bg-price: #d17b49;
+
+  --ff-heading: "Poppins", sans-serif;
+  --ff-body: "Roboto", sans-serif;
+  --ff-alt: "Montserrat", sans-serif;
+}

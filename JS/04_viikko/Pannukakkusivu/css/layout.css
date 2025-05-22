@@ -1,0 +1,80 @@
+.container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+.image-container {
+  flex: 0 0 40%;
+  height: 100%;
+  position: relative;
+}
+
+.image-container img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.form-container {
+  padding: 4rem;
+  flex: 0 0 60%;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.form-container form.wide {
+  width: 80%;
+  margin: 10px auto;
+}
+
+.info-block {
+  margin-top: 2rem;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 2%;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.info-field {
+  flex: 0 0 48%;
+  display: flex;
+  flex-direction: column;
+}
+
+.info-field label {
+  font-size: 0.75rem;
+  color: var(--clr-font_2);
+  margin-bottom: 5px;
+}
+
+.info-field input {
+  background-color: rgb(219, 231, 232);
+  color: rgb(0, 31, 31);
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+#name,
+#phone {
+  color: var(--clr-font_2);
+}
+
+#type {
+  background-color: rgb(219, 231, 232);
+  color: rgb(0, 31, 31);
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-top: 5px;
+  width: 100%;
+  font-family: var(--ff-body);
+}

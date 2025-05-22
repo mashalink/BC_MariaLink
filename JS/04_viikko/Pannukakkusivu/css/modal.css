@@ -1,0 +1,84 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: var(--clr-bg);
+  padding: 25px 30px;
+  border-radius: 12px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  position: relative;
+  font-family: var(--ff-body);
+}
+.order-summary-modal h3 {
+  color: var(--clr-primary);
+  font-family: var(--ff-heading);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.order-summary-modal p {
+  margin-bottom: 0.75rem;
+}
+
+.order-summary-modal ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0.5rem 0 1rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--clr-primary);
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.3s ease;
+}
+
+.close:hover {
+  color: var(--clr-primary-2);
+}
+
+#confirmOrderButton {
+  display: block;
+  width: 100%;
+  max-width: 250px;
+  margin: 1.5rem auto 0;
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-family: var(--ff-heading);
+  color: var(--clr-font-2);
+  background-color: var(--clr-primary);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(251, 127, 80, 0.5);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#confirmOrderButton:hover,
+#confirmOrderButton:focus {
+  background-color: var(--clr-primary-2);
+  transform: scale(1.05);
+  outline: none;
+}

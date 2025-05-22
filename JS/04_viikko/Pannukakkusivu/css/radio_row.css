@@ -1,0 +1,21 @@
+.radio-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.radio-row label {
+  flex: 1 1 30%;
+  font-size: 1rem;
+  color: var(--clr-font_2);
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+}
+
+.radio-row input[type="radio"] {
+  margin-right: 6px;
+  accent-color: var(--clr-primary);
+}

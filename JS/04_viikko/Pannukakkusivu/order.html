@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pancake Order</title>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/checkbox-grid.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/modal.css" />
+    <link rel="stylesheet" href="css/radio_row.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <script type="module" src="js/main.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Image -->
+      <div class="image-container">
+        <img src="image/pancake.jpeg" alt="Delicious pancakes" />
+        <div class="price-banner"><span id="totalPrice">5€</span></div>
+      </div>
+
+      <div class="form-container">
+        <h2>Customize Your Pancake</h2>
+
+        <!-- Name & Phone -->
+        <div class="info-row">
+          <div class="info-field">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              autocomplete="name"
+              required
+            />
+          </div>
+          <div class="info-field">
+            <label for="phone">Phone</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              autocomplete="tel"
+              required
+            />
+          </div>
+        </div>
+
+        <!-- Pancake type -->
+        <div class="info-field">
+          <label for="type">Choose pancake type:</label>
+          <select id="type" name="type" required>
+            <option value="classic" data-price="5">Classic 5€</option>
+            <option value="banana" data-price="6">Banana 6€</option>
+            <option value="chocolate" data-price="6">Chocolate 6€</option>
+            <option value="blueberry" data-price="7">Blueberry 7€</option>
+          </select>
+        </div>
+
+        <!-- Toppings -->
+        <div class="info-block">
+          <h4>Choose toppings:</h4>
+          <div class="checkbox-grid">
+            <label
+              ><input
+                type="checkbox"
+                class="topping"
+                name="topping-maple"
+                data-price="1"
+              />
+              Maple syrup 1€</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                class="topping"
+                name="topping-chocolate"
+                data-price="1"
+              />
+              Chocolate 1€</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                class="topping"
+                name="topping-raspberry"
+                data-price="1"
+              />
+              Raspberry jam 1€</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                class="topping"
+                name="topping-strawberry"
+                data-price="1"
+              />
+              Strawberry jam 1€</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                class="topping"
+                name="topping-blueberry"
+                data-price="1"
+              />
+              Blueberry jam 1€</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                class="topping"
+                name="topping-lingonberry"
+                data-price="1"
+              />
+              Lingonberry jam 1€</label
+            >
+          </div>
+        </div>
+
+        <!-- Extras -->
+        <div class="info-block">
+          <h4>Choose extras:</h4>
+          <div class="checkbox-grid">
+            <label
+              ><input
+                type="checkbox"
+                class="extra"
+                name="extra-banana"
+                data-price="1"
+              />
+              Banana 1€</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                class="extra"
+                name="extra-strawberry"
+                data-price="2"
+              />
+              Strawberry 2€</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                class="extra"
+                name="extra-blueberry"
+                data-price="2"
+              />
+              Blueberry 2€</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                class="extra"
+                name="extra-raspberry"
+                data-price="3"
+              />
+              Raspberry 3€</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                class="extra"
+                name="extra-whipped"
+                data-price="2"
+              />
+              Whipped cream 2€</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                class="extra"
+                name="extra-ice"
+                data-price="3"
+              />
+              Ice cream 3€</label
+            >
+          </div>
+        </div>
+
+        <!-- Delivery -->
+        <div class="info-block">
+          <h4>Delivery method:</h4>
+          <div class="radio-row">
+            <label
+              ><input
+                type="radio"
+                name="delivery"
+                value="eat-in"
+                data-price="0"
+                checked
+              />
+              Eat-in 0€</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="delivery"
+                value="pickup"
+                data-price="0"
+              />
+              Pickup 0€</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="delivery"
+                value="delivery"
+                data-price="5"
+              />
+              Delivery 5€</label
+            >
+          </div>
+        </div>
+
+        <h4>Total price: <span id="totalPriceDisplay">5€</span></h4>
+        <button id="showSummaryButton" type="button">Show order summary</button>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="orderModal" class="modal hidden">
+      <div class="modal-content">
+        <span id="closeModal" class="close">&times;</span>
+        <div class="order-summary-modal"></div>
+      </div>
+    </div>
+  </body>
+</html>

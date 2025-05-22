@@ -1,0 +1,18 @@
+.checkbox-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.4rem 1.2rem;
+  margin-top: 0.5rem;
+}
+
+.checkbox-grid label {
+  font-size: 1rem;
+  color: var(--clr-font_2);
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-grid input[type="checkbox"] {
+  margin-right: 6px;
+  accent-color: var(--clr-primary);
+}
