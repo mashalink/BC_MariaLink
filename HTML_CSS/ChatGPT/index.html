@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>My Personal Homepage</title>
+
+    <!-- Internal CSS -->
+    <style>
+      /* General Body Styling */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        opacity: 0; /* Start with the whole page hidden */
+        animation: fadeIn 2s forwards; /* Apply fade-in effect on page load */
+      }
+
+      /* Fade-in Animation */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      /* Header Styling */
+      header {
+        background-color: #4caf50;
+        color: white;
+        padding: 20px;
+        text-align: center;
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 2.5em;
+      }
+
+      /* Section Styling */
+      section {
+        padding: 20px;
+        margin: 20px;
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        opacity: 0; /* Start with sections hidden */
+        animation: fadeInSection 2s forwards; /* Apply fade-in effect to sections */
+        animation-delay: 1s; /* Delay for sections */
+      }
+
+      /* Fade-in Animation for Sections */
+      @keyframes fadeInSection {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      section h2 {
+        color: #4caf50;
+        font-size: 1.8em;
+      }
+
+      section p {
+        font-size: 1.1em;
+        line-height: 1.6;
+      }
+
+      section ul {
+        list-style-type: disc;
+        padding-left: 20px;
+      }
+
+      section a {
+        color: #4caf50;
+        text-decoration: none;
+      }
+
+      section a:hover {
+        text-decoration: underline;
+      }
+
+      /* Image Styling */
+      #image img {
+        width: 100%;
+        max-width: 800px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+      }
+
+      /* Button Styling */
+      #toggleButton {
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 1em;
+        cursor: pointer;
+        margin-top: 10px;
+        border-radius: 5px;
+        transition: transform 0.3s ease; /* Animate the button */
+      }
+
+      #toggleButton:hover {
+        background-color: #45a049;
+        transform: scale(1.1); /* Make the button grow slightly on hover */
+      }
+
+      /* Initially hidden content */
+      #projects {
+        display: none;
+      }
+
+      /* Form Styling */
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      input,
+      textarea {
+        padding: 10px;
+        font-size: 1em;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+
+      input[type="submit"] {
+        background-color: #4caf50;
+        color: white;
+        cursor: pointer;
+        border: none;
+        padding: 12px 20px;
+        font-size: 1em;
+        border-radius: 5px;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+
+      /* Footer Styling */
+      footer {
+        background-color: #4caf50;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        font-size: 1em;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+
+      /* Responsive Design: Mobile-First Approach */
+      @media (max-width: 768px) {
+        /* Header font size */
+        header h1 {
+          font-size: 2em;
+        }
+
+        /* Section padding and margin for smaller screens */
+        section {
+          padding: 15px;
+          margin: 15px;
+        }
+
+        /* Form inputs and textarea */
+        input,
+        textarea {
+          font-size: 0.9em;
+          padding: 8px;
+        }
+
+        input[type="submit"] {
+          padding: 10px 15px;
+          font-size: 1em;
+        }
+
+        /* Make button width 100% on mobile */
+        #toggleButton {
+          width: 100%;
+          padding: 12px;
+        }
+
+        /* Make the image responsive */
+        #image img {
+          max-width: 100%;
+          height: auto;
+        }
+      }
+
+      /* Responsive Design for Very Small Screens (Mobile Portrait) */
+      @media (max-width: 480px) {
+        /* Reduce font size for very small screens */
+        header h1 {
+          font-size: 1.6em;
+        }
+
+        section h2 {
+          font-size: 1.5em;
+        }
+
+        section p {
+          font-size: 1em;
+        }
+
+        /* Adjust form element padding and font size */
+        input,
+        textarea {
+          font-size: 0.8em;
+          padding: 7px;
+        }
+
+        input[type="submit"] {
+          padding: 10px 15px;
+          font-size: 0.9em;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Main Title -->
+    <header>
+      <h1>Welcome to My Personal Homepage</h1>
+    </header>
+
+    <!-- Image Section -->
+    <section id="image">
+      <img
+        src="https://images.unsplash.com/photo-1516972810927-80185027ca84"
+        alt="Laptop workspace"
+      />
+    </section>
+
+    <!-- Introduction Section -->
+    <section id="introduction">
+      <h2>About Me</h2>
+      <p>
+        Hi there! I am a passionate web developer with a love for AI and
+        technology. I enjoy creating meaningful, interactive web experiences
+        that solve real-world problems. I’m always learning and expanding my
+        skills in coding and design, with a strong focus on JavaScript and AI
+        integration.
+      </p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+      <h2>My Projects</h2>
+      <p>
+        Over the past few years, I’ve worked on several exciting projects. Here
+        are some of the highlights:
+      </p>
+      <ul>
+        <li>
+          <strong>AI Chatbot:</strong> A chatbot that helps users find answers
+          to their questions on a website.
+        </li>
+        <li>
+          <strong>Personal Portfolio:</strong> A dynamic portfolio showcasing my
+          web development skills and projects.
+        </li>
+        <li>
+          <strong>Task Management Web App:</strong> A simple and intuitive web
+          app to manage daily tasks and projects.
+        </li>
+      </ul>
+    </section>
+
+    <!-- Button to toggle the Projects section -->
+    <button id="toggleButton" onclick="toggleProjects()">
+      Show/Hide My Projects
+    </button>
+
+    <!-- Contact Form Section -->
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <p>
+        If you’d like to get in touch, feel free to reach out by filling out the
+        form below:
+      </p>
+
+      <!-- Contact Form -->
+      <form
+        action="mailto:someone@example.com"
+        method="POST"
+        enctype="multipart/form-data"
+      >
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Your Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <input type="submit" value="Send Message" />
+      </form>
+    </section>
+
+    <!-- JavaScript for Show/Hide Content -->
+    <script>
+      function toggleProjects() {
+        var projectsSection = document.getElementById("projects");
+        if (
+          projectsSection.style.display === "none" ||
+          projectsSection.style.display === ""
+        ) {
+          projectsSection.style.display = "block"; // Show the section
+        } else {
+          projectsSection.style.display = "none"; // Hide the section
+        }
+      }
+    </script>
+
+    <!-- Footer Section -->
+    <footer>
+      <p>
+        Website created with the help of AI (ChatGPT) | Prompt Engineer: [Your
+        Name]
+      </p>
+    </footer>
+  </body>
+</html>
