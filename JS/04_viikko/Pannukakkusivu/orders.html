@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order List</title>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <style>
+      body {
+        background-color: var(--clr-bg);
+        color: var(--clr-font);
+        font-family: var(--ff-body);
+        margin: 0;
+      }
+
+      h2 {
+        text-align: center;
+        margin: 2rem 0 1rem;
+        font-family: var(--ff-heading);
+      }
+
+      .order-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        justify-content: center;
+        padding: 0 2rem 2rem;
+        max-width: 1300px;
+        margin: 0 auto;
+      }
+
+      .order-card {
+        flex: 1 1 280px;
+        max-width: 350px;
+        background: #f9f9f9;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 1rem;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+      }
+
+      .order-card h3 {
+        margin-bottom: 0.5rem;
+        color: var(--clr-primary);
+      }
+
+      .order-status {
+        font-weight: bold;
+        padding: 0.3rem 0.6rem;
+        border-radius: 6px;
+        display: inline-block;
+        margin-top: 0.5rem;
+      }
+
+      .waiting {
+        background-color: #fff3cd;
+        color: #856404;
+      }
+
+      .ready {
+        background-color: #cce5ff;
+        color: #004085;
+      }
+
+      .delivered {
+        background-color: #d4edda;
+        color: #155724;
+      }
+
+      .status-buttons {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 0.8rem;
+      }
+
+      .status-buttons button {
+        flex: 1;
+        margin: 0 0.2rem;
+        padding: 0.4rem 0;
+        border: none;
+        border-radius: 6px;
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+      }
+
+      .status-buttons button:hover {
+        transform: scale(1.05);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="orderList" class="order-container"></div>
+
+    <script>
+      const orderList = document.getElementById("orderList");
+      let orders = JSON.parse(localStorage.getItem("orders")) || [];
+
+      function renderOrders() {
+        orderList.innerHTML = "";
+
+        orders.forEach((order, index) => {
+          const card = document.createElement("div");
+          card.classList.add("order-card");
+
+          const statusClass =
+            {
+              waiting: "waiting",
+              ready: "ready",
+              delivered: "delivered",
+            }[order.status] || "waiting";
+
+          const toppingsText =
+            order.toppings && order.toppings.length
+              ? order.toppings.join(", ")
+              : "None";
+
+          const extrasText =
+            order.extras && order.extras.length
+              ? order.extras.join(", ")
+              : "None";
+
+          card.innerHTML = `
+          <h3>Order #${order.id}</h3>
+          <p><strong>Name:</strong> ${order.customerName}</p>
+          <p><strong>Phone:</strong> ${order.phone}</p>
+          <p><strong>Pancake:</strong> ${order.selectedPancake}</p>
+          <p><strong>Toppings:</strong> ${toppingsText}</p>
+          <p><strong>Extras:</strong> ${extrasText}</p>
+          <p><strong>Delivery:</strong> ${order.deliveryMethod}</p>
+          <p><strong>Total:</strong> ${order.totalPrice}€</p>
+          <span class="order-status ${statusClass}">${order.status}</span>
+          <div class="status-buttons">
+            <button onclick="updateStatus(${index}, 'waiting')">🟡</button>
+            <button onclick="updateStatus(${index}, 'ready')">🔵</button>
+            <button onclick="updateStatus(${index}, 'delivered')">🟢</button>
+          </div>
+        `;
+
+          orderList.appendChild(card);
+        });
+      }
+
+      function updateStatus(index, newStatus) {
+        orders[index].status = newStatus;
+        localStorage.setItem("orders", JSON.stringify(orders));
+        renderOrders();
+      }
+
+      renderOrders();
+    </script>
+  </body>
+</html>

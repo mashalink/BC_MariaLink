@@ -19,8 +19,8 @@
     <div class="container">
       <!-- Image -->
       <div class="image-container">
-        <img src="image/pancake.jpeg" alt="Delicious pancakes" />
-        <div class="price-banner"><span id="totalPrice">5€</span></div>
+        <img src="image/pancake.jpg" alt="Delicious pancakes" />
+        <div class="price-banner"><span id="totalPriceBanner">5€</span></div>
       </div>
 
       <div class="form-container">
@@ -54,10 +54,13 @@
         <div class="info-field">
           <label for="type">Choose pancake type:</label>
           <select id="type" name="type" required>
-            <option value="classic" data-price="5">Classic 5€</option>
-            <option value="banana" data-price="6">Banana 6€</option>
-            <option value="chocolate" data-price="6">Chocolate 6€</option>
-            <option value="blueberry" data-price="7">Blueberry 7€</option>
+            <option value="" disabled selected hidden>
+              Choose pancake type
+            </option>
+            <option value="Classic" data-price="5">Classic 5€</option>
+            <option value="Banana" data-price="6">Banana 6€</option>
+            <option value="Chocolate" data-price="6">Chocolate 6€</option>
+            <option value="Blueberry" data-price="7">Blueberry 7€</option>
           </select>
         </div>
 
@@ -71,6 +74,7 @@
                 class="topping"
                 name="topping-maple"
                 data-price="1"
+                value="Maple syrup"
               />
               Maple syrup 1€</label
             >
@@ -80,6 +84,7 @@
                 class="topping"
                 name="topping-chocolate"
                 data-price="1"
+                value="Chocolate"
               />
               Chocolate 1€</label
             >
@@ -89,6 +94,7 @@
                 class="topping"
                 name="topping-raspberry"
                 data-price="1"
+                value="Raspberry jam"
               />
               Raspberry jam 1€</label
             >
@@ -98,6 +104,7 @@
                 class="topping"
                 name="topping-strawberry"
                 data-price="1"
+                value="Strawberry jam"
               />
               Strawberry jam 1€</label
             >
@@ -107,6 +114,7 @@
                 class="topping"
                 name="topping-blueberry"
                 data-price="1"
+                value="Blueberry jam"
               />
               Blueberry jam 1€</label
             >
@@ -116,6 +124,7 @@
                 class="topping"
                 name="topping-lingonberry"
                 data-price="1"
+                value="Lingonberry jam"
               />
               Lingonberry jam 1€</label
             >
@@ -132,6 +141,7 @@
                 class="extra"
                 name="extra-banana"
                 data-price="1"
+                value="Banana"
               />
               Banana 1€</label
             >
@@ -141,6 +151,7 @@
                 class="extra"
                 name="extra-strawberry"
                 data-price="2"
+                value="Strawberry"
               />
               Strawberry 2€</label
             >
@@ -150,6 +161,7 @@
                 class="extra"
                 name="extra-blueberry"
                 data-price="2"
+                value="Blueberry"
               />
               Blueberry 2€</label
             >
@@ -159,6 +171,7 @@
                 class="extra"
                 name="extra-raspberry"
                 data-price="3"
+                value="Raspberry"
               />
               Raspberry 3€</label
             >
@@ -168,6 +181,7 @@
                 class="extra"
                 name="extra-whipped"
                 data-price="2"
+                value="Whipped cream"
               />
               Whipped cream 2€</label
             >
@@ -176,9 +190,10 @@
                 type="checkbox"
                 class="extra"
                 name="extra-ice"
-                data-price="3"
+                data-price="2"
+                value="Ice cream"
               />
-              Ice cream 3€</label
+              Ice cream 2€</label
             >
           </div>
         </div>
@@ -191,7 +206,7 @@
               ><input
                 type="radio"
                 name="delivery"
-                value="eat-in"
+                value="Eat-in"
                 data-price="0"
                 checked
               />
@@ -201,7 +216,7 @@
               ><input
                 type="radio"
                 name="delivery"
-                value="pickup"
+                value="Pickup"
                 data-price="0"
               />
               Pickup 0€</label
@@ -210,7 +225,7 @@
               ><input
                 type="radio"
                 name="delivery"
-                value="delivery"
+                value="Delivery"
                 data-price="5"
               />
               Delivery 5€</label
@@ -218,7 +233,7 @@
           </div>
         </div>
 
-        <h4>Total price: <span id="totalPriceDisplay">5€</span></h4>
+        <h4>Total price: <span id="totalPriceLine">5€</span></h4>
         <button id="showSummaryButton" type="button">Show order summary</button>
       </div>
     </div>

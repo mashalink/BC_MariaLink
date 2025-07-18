@@ -22,12 +22,12 @@
   box-shadow: 0 0 20px rgba(209, 123, 73, 0.4);
 }
 
-#totalPriceDisplay {
+#totalPriceLine {
   display: inline-block;
   transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-#totalPriceDisplay.animate {
+#totalPriceLine.animate {
   transform: scale(1.2);
   color: #e28c5a;
 }
