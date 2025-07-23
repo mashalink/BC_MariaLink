@@ -5,7 +5,7 @@ export const state = {
   toppingsPrice: 0,
   selectedExtras: [],
   extrasPrice: 0,
-  deliveryMethod: "",
+  deliveryMethod: "Eat-in",
   deliveryPrice: 0,
   totalPrice: 0,
 };
