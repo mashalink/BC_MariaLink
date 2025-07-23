@@ -4,29 +4,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pancake Order</title>
-    <link rel="stylesheet" href="css/base.css" />
-    <link rel="stylesheet" href="css/checkbox-grid.css" />
-    <link rel="stylesheet" href="css/components.css" />
-    <link rel="stylesheet" href="css/layout.css" />
-    <link rel="stylesheet" href="css/modal.css" />
-    <link rel="stylesheet" href="css/radio_row.css" />
+
+    <!-- CSS Styles -->
     <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/responsive.css" />
     <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/checkbox-grid.css" />
+    <link rel="stylesheet" href="css/radio_row.css" />
+    <link rel="stylesheet" href="css/modal.css" />
+
+    <!-- JavaScript -->
     <script type="module" src="js/main.js"></script>
   </head>
+
   <body>
     <div class="container">
-      <!-- Image -->
+      <!-- Image & Price Banner -->
       <div class="image-container">
         <img src="image/pancake.jpg" alt="Delicious pancakes" />
         <div class="price-banner"><span id="totalPriceBanner">0€</span></div>
       </div>
 
+      <!-- Form Section -->
       <div class="form-container">
         <h2>Customize Your Pancake</h2>
 
-        <!-- Name & Phone -->
+        <!-- Customer Info -->
         <div class="info-row">
           <div class="info-field">
             <label for="name">Name</label>
@@ -50,7 +56,7 @@
           </div>
         </div>
 
-        <!-- Pancake type -->
+        <!-- Pancake Type -->
         <div class="info-field">
           <label for="type">Choose pancake type:</label>
           <select id="type" name="type" required>
@@ -72,9 +78,8 @@
               ><input
                 type="checkbox"
                 class="topping"
-                name="topping-maple"
-                data-price="1"
                 value="Maple syrup"
+                data-price="1"
               />
               Maple syrup 1€</label
             >
@@ -82,9 +87,8 @@
               ><input
                 type="checkbox"
                 class="topping"
-                name="topping-chocolate"
-                data-price="1"
                 value="Chocolate"
+                data-price="1"
               />
               Chocolate 1€</label
             >
@@ -92,9 +96,8 @@
               ><input
                 type="checkbox"
                 class="topping"
-                name="topping-raspberry"
-                data-price="1"
                 value="Raspberry jam"
+                data-price="1"
               />
               Raspberry jam 1€</label
             >
@@ -102,9 +105,8 @@
               ><input
                 type="checkbox"
                 class="topping"
-                name="topping-strawberry"
-                data-price="1"
                 value="Strawberry jam"
+                data-price="1"
               />
               Strawberry jam 1€</label
             >
@@ -112,9 +114,8 @@
               ><input
                 type="checkbox"
                 class="topping"
-                name="topping-blueberry"
-                data-price="1"
                 value="Blueberry jam"
+                data-price="1"
               />
               Blueberry jam 1€</label
             >
@@ -122,9 +123,8 @@
               ><input
                 type="checkbox"
                 class="topping"
-                name="topping-lingonberry"
-                data-price="1"
                 value="Lingonberry jam"
+                data-price="1"
               />
               Lingonberry jam 1€</label
             >
@@ -139,9 +139,8 @@
               ><input
                 type="checkbox"
                 class="extra"
-                name="extra-banana"
-                data-price="1"
                 value="Banana"
+                data-price="1"
               />
               Banana 1€</label
             >
@@ -149,9 +148,8 @@
               ><input
                 type="checkbox"
                 class="extra"
-                name="extra-strawberry"
-                data-price="2"
                 value="Strawberry"
+                data-price="2"
               />
               Strawberry 2€</label
             >
@@ -159,9 +157,8 @@
               ><input
                 type="checkbox"
                 class="extra"
-                name="extra-blueberry"
-                data-price="2"
                 value="Blueberry"
+                data-price="2"
               />
               Blueberry 2€</label
             >
@@ -169,9 +166,8 @@
               ><input
                 type="checkbox"
                 class="extra"
-                name="extra-raspberry"
-                data-price="3"
                 value="Raspberry"
+                data-price="3"
               />
               Raspberry 3€</label
             >
@@ -179,9 +175,8 @@
               ><input
                 type="checkbox"
                 class="extra"
-                name="extra-whipped"
-                data-price="2"
                 value="Whipped cream"
+                data-price="2"
               />
               Whipped cream 2€</label
             >
@@ -189,16 +184,15 @@
               ><input
                 type="checkbox"
                 class="extra"
-                name="extra-ice"
-                data-price="2"
                 value="Ice cream"
+                data-price="2"
               />
               Ice cream 2€</label
             >
           </div>
         </div>
 
-        <!-- Delivery -->
+        <!-- Delivery Method -->
         <div class="info-block">
           <h4>Delivery method:</h4>
           <div class="radio-row">
@@ -233,7 +227,10 @@
           </div>
         </div>
 
+        <!-- Total -->
         <h4>Total price: <span id="totalPriceLine">0€</span></h4>
+
+        <!-- Summary Button -->
         <button id="showSummaryButton" type="button">Show order summary</button>
       </div>
     </div>
