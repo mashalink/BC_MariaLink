@@ -130,8 +130,8 @@
           <p><strong>Pancake:</strong> ${order.selectedPancake}</p>
           <p><strong>Toppings:</strong> ${toppingsText}</p>
           <p><strong>Extras:</strong> ${extrasText}</p>
-          <p><strong>Delivery:</strong> ${order.deliveryMethod}</p>
-          <p><strong>Total:</strong> ${order.totalPrice}€</p>
+          <p><strong>Delivery:</strong> ${order.delivery}</p>
+          <p><strong>Total:</strong> ${order.price}€</p>
           <span class="order-status ${statusClass}">${order.status}</span>
           <div class="status-buttons">
             <button onclick="updateStatus(${index}, 'waiting')">🟡</button>
