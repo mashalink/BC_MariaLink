@@ -41,3 +41,30 @@ elete from testi;
 ERROR 1142 (42000): DELETE command denied to user 'matti'@'localhost' for table `ekadb`.`testi`
 MariaDB [ekadb]> drop databases ekadb;
 ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'databases ekadb' at line 1
+exit;
+
+mysql -u admin1 -p
+Enter password: 
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 10
+Server version: 12.0.2-MariaDB Homebrew
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| ekadb              |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+5 rows in set (0.002 sec)
+
+MariaDB [(none)]> create databases ekadb;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'databases ekadb' at line 1
+MariaDB [(none)]> 
