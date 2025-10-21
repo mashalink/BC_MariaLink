@@ -2,15 +2,15 @@
   "Base": {
     "Brand": {
       "Primary": {
-        "value": "{BrandPrimary}",
+        "value": "{Brand.Primary}",
         "type": "color"
       },
       "Secondary": {
-        "value": "{BrandSecondary}",
+        "value": "{Brand.Secondary}",
         "type": "color"
       },
       "Accent": {
-        "value": "{BrandAccent}",
+        "value": "{Brand.Tertiary}",
         "type": "color"
       }
     },
@@ -567,6 +567,12 @@
         "DisabledTx": {
           "value": "{Base.Text.Disabled}",
           "type": "color"
+        },
+        "Icon": {
+          "Default": { "value": "{Base.Text.Inverse}", "type": "color" },
+          "Hover": { "value": "{Base.Text.Inverse}", "type": "color" },
+          "Active": { "value": "{Base.Text.Inverse}", "type": "color" },
+          "Disabled": { "value": "{Base.Text.Disabled}", "type": "color" }
         }
       },
       "Secondary": {
@@ -597,9 +603,32 @@
         "DisabledTx": {
           "value": "{Base.Text.Disabled}",
           "type": "color"
+        },
+        "Icon": {
+          "Default": { "value": "{Base.Text.Primary}", "type": "color" },
+          "Hover": { "value": "{Base.Text.Primary}", "type": "color" },
+          "Active": { "value": "{Base.Text.Inverse}", "type": "color" },
+          "Disabled": { "value": "{Base.Text.Disabled}", "type": "color" }
         }
       },
       "Tertiary": {
+        "Bg": {
+          "value": "{Base.Background.Default}",
+          "type": "color"
+        },
+        "HoverBg": {
+          "value": "{Base.Overlay.Soft}",
+          "type": "color"
+        },
+        "ActiveBg": {
+          "value": "{Base.Overlay.Medium}",
+          "type": "color"
+        },
+        "DisabledBg": {
+          "value": "{Base.Background.Default}",
+          "type": "color"
+        },
+
         "Text": {
           "value": "{Base.Link.Default}",
           "type": "color"
@@ -615,6 +644,18 @@
         "DisabledTx": {
           "value": "{Base.Link.Disabled}",
           "type": "color"
+        },
+        "Icon": {
+          "Bg": { "value": "{Base.Background.Default}", "type": "color" },
+          "HoverBg": { "value": "{Base.Overlay.Soft}", "type": "color" },
+          "ActiveBg": { "value": "{Base.Action.Active}", "type": "color" },
+
+          "Icon": { "value": "{Base.Action.Default}", "type": "color" },
+          "HoverIcon": { "value": "{Base.Action.Default}", "type": "color" },
+          "ActiveIcon": { "value": "{Base.Text.Inverse}", "type": "color" },
+          "DisabledIc": { "value": "{Base.Icon.Disabled}", "type": "color" },
+
+          "Size": { "value": "{Base.Icon.Size.MD}", "type": "sizing" }
         }
       },
       "Icon": {
