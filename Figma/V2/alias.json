@@ -64,11 +64,6 @@
   "RadiusLG":   { "value": "{Effects.BorderRadius.LG}", "type": "borderRadius" },
   "RadiusFull": { "value": "{Effects.BorderRadius.Full}", "type": "borderRadius" },
 
-  "CornerSm":   { "value": "{RadiusSM}", "type": "borderRadius" },
-  "CornerMd":   { "value": "{RadiusMD}", "type": "borderRadius" },
-  "CornerLg":   { "value": "{RadiusLG}", "type": "borderRadius" },
-  "CornerFull": { "value": "{RadiusFull}", "type": "borderRadius" },
-
   "BorderWidthThin":  { "value": "{Effects.BorderWidth.Thin}", "type": "borderWidth" },
   "BorderWidthThick": { "value": "{Effects.BorderWidth.Thick}", "type": "borderWidth" },
 
@@ -105,7 +100,8 @@
   "FontSize32": { "value": "{FontSize.3XL}", "type": "fontSizes" },
   "FontSize40": { "value": "{FontSize.4XL}", "type": "fontSizes" },
   "FontSize48": { "value": "{FontSize.5XL}", "type": "fontSizes" },
-  "FontSize64": { "value": "{FontSize.6XL}", "type": "fontSizes" },
+  "FontSize56": { "value": "{FontSize.6XL}", "type": "fontSizes" },
+  "FontSize64": { "value": "{FontSize.7XL}", "type": "fontSizes" },
 
   "LetterSpacingTighter": { "value": "{Typography.LetterSpacing.Tighter}", "type": "letterSpacing" },
   "LetterSpacingTight":   { "value": "{Typography.LetterSpacing.Tight}", "type": "letterSpacing" },

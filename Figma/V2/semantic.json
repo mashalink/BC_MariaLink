@@ -72,6 +72,30 @@
         "XL": { "value": "{OverlayXL}", "type": "sizing" }
       }
     },
+    "Input": {
+      "Bg": { "value": "{Base.Background.Default}", "type": "color" },
+      "HoverBg": { "value": "{Base.Background.Default}", "type": "color" },
+      "FocusBg": { "value": "{Base.Background.Default}", "type": "color" },
+
+      "Text": { "value": "{Base.Text.Primary}", "type": "color" },
+      "Placeholder": { "value": "{Base.Text.Placeholder}", "type": "color" },
+
+      "Border": { "value": "{Base.Border.Default}", "type": "color" },
+      "HoverBorder": { "value": "{Base.Border.Strong}", "type": "color" },
+      "FocusBorder": { "value": "{Base.Border.Focus}", "type": "color" },
+      "FocusRing": { "value": "{Base.FocusRing}", "type": "boxShadow" },
+
+      "Disabled": {
+        "Bg": { "value": "{Base.Background.Disabled}", "type": "color" },
+        "Text": { "value": "{Base.Text.Disabled}", "type": "color" },
+        "Border": { "value": "{Base.Border.Disabled}", "type": "color" }
+      },
+
+      "Radius": { "value": "{Base.Radius.Md}", "type": "borderRadius" },
+      "BorderWidth": { "value": "{Base.BorderWidth.Thin}", "type": "borderWidth" },
+      "PaddingX": { "value": "{Base.Space.SM}", "type": "spacing" },
+      "PaddingY": { "value": "{Base.Space.XS}", "type": "spacing" }
+    },
     "TypographyStyles": {
       "H1": {
         "value": {
@@ -256,22 +280,22 @@
       }
     },
     "Space": {
-      "XS": { "value": "{SpacingXS}", "type": "spacing" },
-      "SM": { "value": "{SpacingSM}", "type": "spacing" },
-      "MD": { "value": "{SpacingMD}", "type": "spacing" },
-      "LG": { "value": "{SpacingLG}", "type": "spacing" },
-      "XL": { "value": "{SpacingXL}", "type": "spacing" },
-      "2XL": { "value": "{Spacing2XL}", "type": "spacing" },
-      "3XL": { "value": "{Spacing3XL}", "type": "spacing" },
-      "4XL": { "value": "{Spacing4XL}", "type": "spacing" },
-      "5XL": { "value": "{Spacing5XL}", "type": "spacing" },
-      "6XL": { "value": "{Spacing6XL}", "type": "spacing" }
+      "XS": { "value": "{SpaceXS}", "type": "spacing" },
+      "SM": { "value": "{SpaceSM}", "type": "spacing" },
+      "MD": { "value": "{SpaceMD}", "type": "spacing" },
+      "LG": { "value": "{SpaceLG}", "type": "spacing" },
+      "XL": { "value": "{SpaceXL}", "type": "spacing" },
+      "2XL": { "value": "{Space2XL}", "type": "spacing" },
+      "3XL": { "value": "{Space3XL}", "type": "spacing" },
+      "4XL": { "value": "{Space4XL}", "type": "spacing" },
+      "5XL": { "value": "{Space5XL}", "type": "spacing" },
+      "6XL": { "value": "{Space6XL}", "type": "spacing" }
     },
     "Radius": {
-      "Sm": { "value": "{CornerSm}", "type": "borderRadius" },
-      "Md": { "value": "{CornerMd}", "type": "borderRadius" },
-      "Lg": { "value": "{CornerLg}", "type": "borderRadius" },
-      "Full": { "value": "{CornerFull}", "type": "borderRadius" }
+      "Sm": { "value": "{RadiusSM}", "type": "borderRadius" },
+      "Md": { "value": "{RadiusMD}", "type": "borderRadius" },
+      "Lg": { "value": "{RadiusLG}", "type": "borderRadius" },
+      "Full": { "value": "{RadiusFull}", "type": "borderRadius" }
     },
     "BorderWidth": {
       "Thin": { "value": "{BorderWidthThin}", "type": "borderWidth" },
@@ -506,7 +530,7 @@
 
       "PaddingXIconOnly": { "value": "{Base.Space.XS}", "type": "spacing" },
 
-      "Shadow": { "value": "{Base.UIShadowDefault}", "type": "boxShadow" }
+      "Shadow": { "value": "{Base.Shadow.Default}", "type": "boxShadow" }
     },
     "Input": {
       "Bg": { "value": "{Base.Background.Default}", "type": "color" },
@@ -639,74 +663,74 @@
       },
       "Trigger": {
         "Bg": {
-          "value": "{Input.Bg}",
+          "value": "{Base.Input.Bg}",
           "type": "color"
         },
         "HoverBg": {
-          "value": "{Input.HoverBg}",
+          "value": "{Base.Input.HoverBg}",
           "type": "color"
         },
         "FocusBg": {
-          "value": "{Input.FocusBg}",
+          "value": "{Base.Input.FocusBg}",
           "type": "color"
         },
 
         "Text": {
-          "value": "{Input.Text}",
+          "value": "{Base.Input.Text}",
           "type": "color"
         },
         "Placeholder": {
-          "value": "{Input.Placeholder}",
+          "value": "{Base.Input.Placeholder}",
           "type": "color"
         },
 
         "Border": {
-          "value": "{Input.Border}",
+          "value": "{Base.Input.Border}",
           "type": "color"
         },
         "HoverBorder": {
-          "value": "{Input.HoverBorder}",
+          "value": "{Base.Input.HoverBorder}",
           "type": "color"
         },
         "FocusBorder": {
-          "value": "{Input.FocusBorder}",
+          "value": "{Base.Input.FocusBorder}",
           "type": "color"
         },
 
         "FocusRing": {
-          "value": "{Input.FocusRing}",
+          "value": "{Base.Input.FocusRing}",
           "type": "boxShadow"
         },
 
         "Disabled": {
           "Bg": {
-            "value": "{Input.Disabled.Bg}",
+            "value": "{Base.Input.Disabled.Bg}",
             "type": "color"
           },
           "Text": {
-            "value": "{Input.Disabled.Text}",
+            "value": "{Base.Input.Disabled.Text}",
             "type": "color"
           },
           "Border": {
-            "value": "{Input.Disabled.Border}",
+            "value": "{Base.Input.Disabled.Border}",
             "type": "color"
           }
         },
 
         "Radius": {
-          "value": "{Input.Radius}",
+          "value": "{Base.Input.Radius}",
           "type": "borderRadius"
         },
         "BorderWidth": {
-          "value": "{Input.BorderWidth}",
+          "value": "{Base.Input.BorderWidth}",
           "type": "borderWidth"
         },
         "PaddingX": {
-          "value": "{Input.PaddingX}",
+          "value": "{Base.Input.PaddingX}",
           "type": "spacing"
         },
         "PaddingY": {
-          "value": "{Input.PaddingY}",
+          "value": "{Base.Input.PaddingY}",
           "type": "spacing"
         }
       }
