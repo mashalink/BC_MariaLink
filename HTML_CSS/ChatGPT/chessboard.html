@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Шахматная доска</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --light: #f6eadf;
+        --dark: #b17455;
+        --frame: #1f2a44;
+        --bg: radial-gradient(circle at 20% 20%, #1b2035, #0d1224 55%);
+        --text: #e8eef7;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 24px;
+        background: var(--bg);
+        color: var(--text);
+        font-family: "Manrope", "Segoe UI", sans-serif;
+      }
+
+      .card {
+        width: min(560px, 94vw);
+        background: rgba(15, 20, 36, 0.7);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 18px;
+        padding: 20px 20px 28px;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+        backdrop-filter: blur(12px);
+      }
+
+      h1 {
+        margin: 0 0 12px;
+        font-weight: 700;
+        letter-spacing: -0.4px;
+      }
+
+      p {
+        margin: 0 0 18px;
+        color: rgba(232, 238, 247, 0.78);
+        line-height: 1.5;
+      }
+
+      .board {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        width: min(92vw, 520px);
+        aspect-ratio: 1 / 1;
+        border: 12px solid var(--frame);
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+      }
+
+      .square {
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 6px;
+        font-weight: 700;
+        font-size: 0.9rem;
+      }
+
+      .square.light {
+        background: var(--light);
+        color: #3a2c24;
+      }
+
+      .square.dark {
+        background: var(--dark);
+        color: #fdf6ec;
+      }
+
+      .notation {
+        opacity: 0.85;
+        position: relative;
+        z-index: 2;
+      }
+
+      .piece {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: clamp(28px, 4vw, 44px);
+        pointer-events: auto;
+        cursor: grab;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
+      }
+
+      .piece.white {
+        color: #fdfdfd;
+      }
+
+      .piece.black {
+        color: #141414;
+        text-shadow: 0 2px 4px rgba(255, 255, 255, 0.22);
+      }
+
+      .piece.dragging {
+        opacity: 0.55;
+        cursor: grabbing;
+      }
+
+      .square.drop-target {
+        outline: 2px solid #76c7ff;
+        outline-offset: -4px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h1>Шахматная доска</h1>
+      <p>Классическая 8×8 доска с разметкой клеток в стандартной нотации.</p>
+      <div class="board" id="board"></div>
+    </div>
+
+    <script>
+      const board = document.getElementById("board");
+      const files = ["a", "b", "c", "d", "e", "f", "g", "h"];
+      const initialPosition = {
+        a8: "♜",
+        b8: "♞",
+        c8: "♝",
+        d8: "♛",
+        e8: "♚",
+        f8: "♝",
+        g8: "♞",
+        h8: "♜",
+        a7: "♟",
+        b7: "♟",
+        c7: "♟",
+        d7: "♟",
+        e7: "♟",
+        f7: "♟",
+        g7: "♟",
+        h7: "♟",
+        a2: "♙",
+        b2: "♙",
+        c2: "♙",
+        d2: "♙",
+        e2: "♙",
+        f2: "♙",
+        g2: "♙",
+        h2: "♙",
+        a1: "♖",
+        b1: "♘",
+        c1: "♗",
+        d1: "♕",
+        e1: "♔",
+        f1: "♗",
+        g1: "♘",
+        h1: "♖",
+      };
+
+      const whitePieces = new Set(["♙", "♘", "♗", "♖", "♕", "♔"]);
+      const whiteFilled = {
+        "♙": "♟",
+        "♘": "♞",
+        "♗": "♝",
+        "♖": "♜",
+        "♕": "♛",
+        "♔": "♚",
+      };
+      let draggedPiece = null;
+      let hoveredSquare = null;
+
+      function createPiece(symbol) {
+        const isWhite = whitePieces.has(symbol);
+        const el = document.createElement("div");
+        el.className = `piece ${isWhite ? "white" : "black"}`;
+        el.textContent = isWhite ? whiteFilled[symbol] : symbol;
+        el.dataset.piece = symbol;
+        el.draggable = true;
+
+        el.addEventListener("dragstart", (event) => {
+          draggedPiece = el;
+          event.dataTransfer.effectAllowed = "move";
+          event.dataTransfer.setData("text/plain", symbol);
+          setTimeout(() => el.classList.add("dragging"), 0);
+        });
+
+        el.addEventListener("dragend", () => {
+          el.classList.remove("dragging");
+          draggedPiece = null;
+        });
+
+        return el;
+      }
+
+      function createSquare(name, isDark, symbol) {
+        const square = document.createElement("div");
+        square.className = `square ${isDark ? "dark" : "light"}`;
+        square.innerHTML = `<span class="notation">${name}</span>`;
+        square.dataset.square = name;
+
+        if (symbol) {
+          square.appendChild(createPiece(symbol));
+        }
+
+        return square;
+      }
+
+      function setHoveredSquare(square) {
+        if (hoveredSquare && hoveredSquare !== square) {
+          hoveredSquare.classList.remove("drop-target");
+        }
+        hoveredSquare = square;
+        if (hoveredSquare) hoveredSquare.classList.add("drop-target");
+      }
+
+      board.addEventListener("dragover", (event) => {
+        if (!draggedPiece) return;
+        const square = event.target.closest(".square");
+        if (!square || !board.contains(square)) return;
+        event.preventDefault();
+        setHoveredSquare(square);
+      });
+
+      board.addEventListener("dragleave", (event) => {
+        const square = event.relatedTarget?.closest?.(".square");
+        if (!square || !board.contains(square)) {
+          setHoveredSquare(null);
+        }
+      });
+
+      board.addEventListener("drop", (event) => {
+        event.preventDefault();
+        const square = event.target.closest(".square");
+        setHoveredSquare(null);
+        if (!draggedPiece || !square || !board.contains(square)) return;
+
+        const occupyingPiece = square.querySelector(".piece");
+        if (occupyingPiece) occupyingPiece.remove();
+
+        square.appendChild(draggedPiece);
+      });
+
+      for (let rank = 8; rank >= 1; rank -= 1) {
+        for (let file = 0; file < 8; file += 1) {
+          const name = `${files[file]}${rank}`;
+          const isDark = (file + rank) % 2 === 1;
+          const piece = initialPosition[name];
+          board.appendChild(createSquare(name, isDark, piece));
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,1118 @@
+{
+  "Base": {
+    "Brand": {
+      "Primary": { "value": "{Brand.Primary}", "type": "color" },
+      "Secondary": { "value": "{Brand.Secondary}", "type": "color" },
+      "Accent": { "value": "{Brand.Tertiary}", "type": "color" },
+      "SecondaryHover": { "value": "{ActionHover}", "type": "color" },
+      "SecondaryActive": { "value": "{ActionActive}", "type": "color" }
+    },
+    "Background": {
+      "Default": { "value": "{BackgroundDefault}", "type": "color" },
+      "Alt": { "value": "{BackgroundAlt}", "type": "color" },
+      "Disabled": { "value": "{BackgroundDisabled}", "type": "color" },
+      "Inverse": { "value": "{BackgroundInverse}", "type": "color" }
+    },
+    "Text": {
+      "Primary": { "value": "{TextPrimary}", "type": "color" },
+      "Secondary": { "value": "{TextSecondary}", "type": "color" },
+      "Placeholder": { "value": "{TextPlaceholder}", "type": "color" },
+      "Disabled": { "value": "{TextDisabled}", "type": "color" },
+      "Inverse": { "value": "{TextInverse}", "type": "color" },
+      "OnAction": { "value": "{ActionOnDefault}", "type": "color" }
+    },
+    "Border": {
+      "Default": { "value": "{BorderDefault}", "type": "color" },
+      "Strong": { "value": "{BorderStrong}", "type": "color" },
+      "Focus": { "value": "{BorderFocus}", "type": "color" },
+      "Disabled": { "value": "{BorderDisabled}", "type": "color" },
+      "Transparent": { "value": "transparent", "type": "color" }
+    },
+    "Action": {
+      "Default": { "value": "{ActionDefault}", "type": "color" },
+      "Hover": { "value": "{ActionHover}", "type": "color" },
+      "Active": { "value": "{ActionActive}", "type": "color" },
+      "Strong": { "value": "{ActionStrong}", "type": "color" },
+      "Focus": { "value": "{ActionFocus}", "type": "color" },
+      "Disabled": { "value": "{ActionDisabled}", "type": "color" },
+      "OnDefault": { "value": "{ActionOnDefault}", "type": "color" }
+    },
+    "Link": {
+      "Default": { "value": "{LinkDefault}", "type": "color" },
+      "Hover": { "value": "{LinkHover}", "type": "color" },
+      "Visited": { "value": "{LinkVisited}", "type": "color" },
+      "Disabled": { "value": "{LinkDisabled}", "type": "color" }
+    },
+    "Status": {
+      "Success": { "value": "{StatusSuccess}", "type": "color" },
+      "Warning": { "value": "{StatusWarning}", "type": "color" },
+      "Error": { "value": "{StatusError}", "type": "color" },
+      "Info": { "value": "{StatusInfo}", "type": "color" }
+    },
+    "Icon": {
+      "Default": { "value": "{Base.Text.Primary}", "type": "color" },
+      "Muted": { "value": "{Base.Text.Secondary}", "type": "color" },
+      "Inverse": { "value": "{Base.Text.Inverse}", "type": "color" },
+      "Action": { "value": "{Base.Action.Default}", "type": "color" },
+      "Disabled": { "value": "{Base.Text.Disabled}", "type": "color" },
+      "Size": {
+        "SM": { "value": "{IconSizeSM}", "type": "sizing" },
+        "MD": { "value": "{IconSizeMD}", "type": "sizing" },
+        "LG": { "value": "{IconSizeLG}", "type": "sizing" }
+      }
+    },
+    "Overlay": {
+      "Soft": { "value": "{OverlaySoft}", "type": "color" },
+      "Medium": { "value": "{OverlayMedium}", "type": "color" },
+      "Strong": { "value": "{OverlayStrong}", "type": "color" },
+      "Size": {
+        "SM": { "value": "{OverlaySM}", "type": "sizing" },
+        "MD": { "value": "{OverlayMD}", "type": "sizing" },
+        "LG": { "value": "{OverlayLG}", "type": "sizing" },
+        "XL": { "value": "{OverlayXL}", "type": "sizing" }
+      }
+    },
+    "TypographyStyles": {
+      "H1": {
+        "value": {
+          "fontFamily": "{Base.Typography.FontHeading}",
+          "fontWeight": "{Base.Typography.Heading.H1.Weight}",
+          "fontSize": "{Base.Typography.Heading.H1.FontSize}",
+          "lineHeight": "{Base.Typography.Heading.H1.LineHeight}",
+          "letterSpacing": "{Base.Typography.Heading.H1.Tracking}"
+        },
+        "type": "typography"
+      },
+      "H2": {
+        "value": {
+          "fontFamily": "{Base.Typography.FontHeading}",
+          "fontWeight": "{Base.Typography.Heading.H2.Weight}",
+          "fontSize": "{Base.Typography.Heading.H2.FontSize}",
+          "lineHeight": "{Base.Typography.Heading.H2.LineHeight}",
+          "letterSpacing": "{Base.Typography.Heading.H2.Tracking}"
+        },
+        "type": "typography"
+      },
+      "H3": {
+        "value": {
+          "fontFamily": "{Base.Typography.FontHeading}",
+          "fontWeight": "{Base.Typography.Heading.H3.Weight}",
+          "fontSize": "{Base.Typography.Heading.H3.FontSize}",
+          "lineHeight": "{Base.Typography.Heading.H3.LineHeight}",
+          "letterSpacing": "{Base.Typography.Heading.H3.Tracking}"
+        },
+        "type": "typography"
+      },
+      "BodyLG": {
+        "value": {
+          "fontFamily": "{Base.Typography.FontPrimary}",
+          "fontWeight": "{Base.Typography.Body.LG.Weight}",
+          "fontSize": "{Base.Typography.Body.LG.FontSize}",
+          "lineHeight": "{Base.Typography.Body.LG.LineHeight}",
+          "letterSpacing": "{Base.Typography.Body.LG.Tracking}"
+        },
+        "type": "typography"
+      },
+      "BodyMD": {
+        "value": {
+          "fontFamily": "{Base.Typography.FontPrimary}",
+          "fontWeight": "{Base.Typography.Body.MD.Weight}",
+          "fontSize": "{Base.Typography.Body.MD.FontSize}",
+          "lineHeight": "{Base.Typography.Body.MD.LineHeight}",
+          "letterSpacing": "{Base.Typography.Body.MD.Tracking}"
+        },
+        "type": "typography"
+      },
+      "BodySM": {
+        "value": {
+          "fontFamily": "{Base.Typography.FontPrimary}",
+          "fontWeight": "{Base.Typography.Body.SM.Weight}",
+          "fontSize": "{Base.Typography.Body.SM.FontSize}",
+          "lineHeight": "{Base.Typography.Body.SM.LineHeight}",
+          "letterSpacing": "{Base.Typography.Body.SM.Tracking}"
+        },
+        "type": "typography"
+      },
+      "LabelLG": {
+        "value": {
+          "fontFamily": "{Base.Typography.FontPrimary}",
+          "fontWeight": "{Base.Typography.Label.LG.Weight}",
+          "fontSize": "{Base.Typography.Label.LG.FontSize}",
+          "lineHeight": "{Base.Typography.Label.LG.LineHeight}",
+          "letterSpacing": "{Base.Typography.Label.LG.Tracking}"
+        },
+        "type": "typography"
+      },
+      "LabelMD": {
+        "value": {
+          "fontFamily": "{Base.Typography.FontPrimary}",
+          "fontWeight": "{Base.Typography.Label.MD.Weight}",
+          "fontSize": "{Base.Typography.Label.MD.FontSize}",
+          "lineHeight": "{Base.Typography.Label.MD.LineHeight}",
+          "letterSpacing": "{Base.Typography.Label.MD.Tracking}"
+        },
+        "type": "typography"
+      },
+      "LabelSM": {
+        "value": {
+          "fontFamily": "{Base.Typography.FontPrimary}",
+          "fontWeight": "{Base.Typography.Label.SM.Weight}",
+          "fontSize": "{Base.Typography.Label.SM.FontSize}",
+          "lineHeight": "{Base.Typography.Label.SM.LineHeight}",
+          "letterSpacing": "{Base.Typography.Label.SM.Tracking}"
+        },
+        "type": "typography"
+      }
+    },
+    "Typography": {
+      "FontPrimary": { "value": "{FontPrimary}", "type": "fontFamilies" },
+      "FontHeading": { "value": "{FontHeading}", "type": "fontFamilies" },
+      "Heading": {
+        "H1": {
+          "FontSize": { "value": "{FontSize56}", "type": "fontSizes" },
+          "LineHeight": { "value": "{LineHeight56}", "type": "lineHeights" },
+          "Tracking": {
+            "value": "{LetterSpacingDefault}",
+            "type": "letterSpacing"
+          },
+          "Weight": { "value": "{FontWeightBold}", "type": "fontWeights" }
+        },
+        "H2": {
+          "FontSize": { "value": "{FontSize40}", "type": "fontSizes" },
+          "LineHeight": { "value": "{LineHeight40}", "type": "lineHeights" },
+          "Tracking": {
+            "value": "{LetterSpacingDefault}",
+            "type": "letterSpacing"
+          },
+          "Weight": { "value": "{FontWeightBold}", "type": "fontWeights" }
+        },
+        "H3": {
+          "FontSize": { "value": "{FontSize32}", "type": "fontSizes" },
+          "LineHeight": { "value": "{LineHeight32}", "type": "lineHeights" },
+          "Tracking": {
+            "value": "{LetterSpacingDefault}",
+            "type": "letterSpacing"
+          },
+          "Weight": { "value": "{FontWeightMedium}", "type": "fontWeights" }
+        }
+      },
+      "Body": {
+        "LG": {
+          "FontSize": { "value": "{FontSize20}", "type": "fontSizes" },
+          "LineHeight": { "value": "{LineHeight20}", "type": "lineHeights" },
+          "Tracking": {
+            "value": "{LetterSpacingDefault}",
+            "type": "letterSpacing"
+          },
+          "Weight": { "value": "{FontWeightRegular}", "type": "fontWeights" }
+        },
+        "MD": {
+          "FontSize": { "value": "{FontSize16}", "type": "fontSizes" },
+          "LineHeight": { "value": "{LineHeight16}", "type": "lineHeights" },
+          "Tracking": {
+            "value": "{LetterSpacingDefault}",
+            "type": "letterSpacing"
+          },
+          "Weight": { "value": "{FontWeightRegular}", "type": "fontWeights" }
+        },
+        "SM": {
+          "FontSize": { "value": "{FontSize14}", "type": "fontSizes" },
+          "LineHeight": { "value": "{LineHeight14}", "type": "lineHeights" },
+          "Tracking": {
+            "value": "{LetterSpacingDefault}",
+            "type": "letterSpacing"
+          },
+          "Weight": { "value": "{FontWeightRegular}", "type": "fontWeights" }
+        }
+      },
+      "Label": {
+        "LG": {
+          "FontSize": { "value": "{FontSize16}", "type": "fontSizes" },
+          "LineHeight": { "value": "{LineHeight16}", "type": "lineHeights" },
+          "Tracking": {
+            "value": "{LetterSpacingLoose}",
+            "type": "letterSpacing"
+          },
+          "Weight": { "value": "{FontWeightMedium}", "type": "fontWeights" }
+        },
+        "MD": {
+          "FontSize": { "value": "{FontSize14}", "type": "fontSizes" },
+          "LineHeight": { "value": "{LineHeight14}", "type": "lineHeights" },
+          "Tracking": {
+            "value": "{LetterSpacingLoose}",
+            "type": "letterSpacing"
+          },
+          "Weight": { "value": "{FontWeightMedium}", "type": "fontWeights" }
+        },
+        "SM": {
+          "FontSize": { "value": "{FontSize12}", "type": "fontSizes" },
+          "LineHeight": { "value": "{LineHeight12}", "type": "lineHeights" },
+          "Tracking": {
+            "value": "{LetterSpacingLoose}",
+            "type": "letterSpacing"
+          },
+          "Weight": { "value": "{FontWeightMedium}", "type": "fontWeights" }
+        }
+      }
+    },
+    "Space": {
+      "XS": { "value": "{SpacingXS}", "type": "spacing" },
+      "SM": { "value": "{SpacingSM}", "type": "spacing" },
+      "MD": { "value": "{SpacingMD}", "type": "spacing" },
+      "LG": { "value": "{SpacingLG}", "type": "spacing" },
+      "XL": { "value": "{SpacingXL}", "type": "spacing" },
+      "2XL": { "value": "{Spacing2XL}", "type": "spacing" },
+      "3XL": { "value": "{Spacing3XL}", "type": "spacing" },
+      "4XL": { "value": "{Spacing4XL}", "type": "spacing" },
+      "5XL": { "value": "{Spacing5XL}", "type": "spacing" },
+      "6XL": { "value": "{Spacing6XL}", "type": "spacing" }
+    },
+    "Radius": {
+      "Sm": { "value": "{CornerSm}", "type": "borderRadius" },
+      "Md": { "value": "{CornerMd}", "type": "borderRadius" },
+      "Lg": { "value": "{CornerLg}", "type": "borderRadius" },
+      "Full": { "value": "{CornerFull}", "type": "borderRadius" }
+    },
+    "BorderWidth": {
+      "Thin": { "value": "{BorderWidthThin}", "type": "borderWidth" },
+      "Thick": { "value": "{BorderWidthThick}", "type": "borderWidth" }
+    },
+    "Shadow": {
+      "Sm": { "value": "{UIShadowSm}", "type": "boxShadow" },
+      "Md": { "value": "{UIShadowMd}", "type": "boxShadow" },
+      "Lg": { "value": "{UIShadowLg}", "type": "boxShadow" },
+      "Default": { "value": "{UIShadowDefault}", "type": "boxShadow" },
+      "Strong": { "value": "{UIShadowStrong}", "type": "boxShadow" }
+    },
+    "FocusRing": { "value": "{UIFocusRing}", "type": "boxShadow" }
+  },
+  "Components": {
+    "Button": {
+      "Primary": {
+        "Bg": { "value": "{Base.Action.Default}", "type": "color" },
+        "HoverBg": { "value": "{Base.Action.Hover}", "type": "color" },
+        "ActiveBg": { "value": "{Base.Action.Active}", "type": "color" },
+
+        "Text": { "value": "{Base.Action.OnDefault}", "type": "color" },
+        "HoverText": { "value": "{Base.Action.OnDefault}", "type": "color" },
+        "ActiveText": { "value": "{Base.Action.OnDefault}", "type": "color" },
+
+        "Border": { "value": "{Base.Action.Default}", "type": "color" },
+        "HoverBorder": { "value": "{Base.Action.Hover}", "type": "color" },
+        "ActiveBorder": { "value": "{Base.Action.Active}", "type": "color" },
+
+        "FocusRing": { "value": "{Base.FocusRing}", "type": "boxShadow" },
+
+        "DisabledBg": {
+          "value": "{Base.Background.Disabled}",
+          "type": "color"
+        },
+        "DisabledText": { "value": "{Base.Text.Disabled}", "type": "color" },
+        "DisabledBorder": {
+          "value": "{Base.Border.Disabled}",
+          "type": "color"
+        },
+
+        "Spinner": { "value": "{Base.Action.OnDefault}", "type": "color" },
+        "Icon": {
+          "Default": { "value": "{Base.Action.OnDefault}", "type": "color" },
+          "Hover": { "value": "{Base.Action.OnDefault}", "type": "color" },
+          "Active": { "value": "{Base.Action.OnDefault}", "type": "color" },
+          "Disabled": { "value": "{Base.Text.Disabled}", "type": "color" }
+        }
+      },
+
+      "Secondary": {
+        "Bg": { "value": "{Base.Brand.Secondary}", "type": "color" },
+        "HoverBg": { "value": "{Base.Brand.SecondaryHover}", "type": "color" },
+        "ActiveBg": {
+          "value": "{Base.Brand.SecondaryActive}",
+          "type": "color"
+        },
+
+        "Text": { "value": "{Base.Action.OnDefault}", "type": "color" },
+        "HoverText": { "value": "{Base.Action.OnDefault}", "type": "color" },
+        "ActiveText": { "value": "{Base.Action.OnDefault}", "type": "color" },
+
+        "Border": { "value": "{Base.Brand.Secondary}", "type": "color" },
+        "HoverBorder": {
+          "value": "{Base.Brand.SecondaryHover}",
+          "type": "color"
+        },
+        "ActiveBorder": {
+          "value": "{Base.Brand.SecondaryActive}",
+          "type": "color"
+        },
+
+        "FocusRing": { "value": "{Base.FocusRing}", "type": "boxShadow" },
+
+        "DisabledBg": {
+          "value": "{Base.Background.Disabled}",
+          "type": "color"
+        },
+        "DisabledText": { "value": "{Base.Text.Disabled}", "type": "color" },
+        "DisabledBorder": {
+          "value": "{Base.Border.Disabled}",
+          "type": "color"
+        },
+
+        "Spinner": { "value": "{Base.Action.OnDefault}", "type": "color" },
+        "Icon": {
+          "Default": { "value": "{Base.Action.OnDefault}", "type": "color" },
+          "Hover": { "value": "{Base.Action.OnDefault}", "type": "color" },
+          "Active": { "value": "{Base.Action.OnDefault}", "type": "color" },
+          "Disabled": { "value": "{Base.Text.Disabled}", "type": "color" }
+        }
+      },
+
+      "Tertiary": {
+        "Bg": { "value": "{Base.Background.Default}", "type": "color" },
+        "HoverBg": { "value": "{Base.Overlay.Soft}", "type": "color" },
+        "ActiveBg": { "value": "{Base.Overlay.Medium}", "type": "color" },
+
+        "Text": { "value": "{Base.Brand.Primary}", "type": "color" },
+        "HoverText": { "value": "{Base.Brand.Primary}", "type": "color" },
+        "ActiveText": { "value": "{Base.Brand.Primary}", "type": "color" },
+
+        "Border": { "value": "{Base.Border.Default}", "type": "color" },
+
+        "FocusRing": { "value": "{Base.FocusRing}", "type": "boxShadow" },
+
+        "DisabledBg": { "value": "{Base.Background.Default}", "type": "color" },
+        "DisabledText": { "value": "{Base.Text.Disabled}", "type": "color" },
+        "DisabledBorder": {
+          "value": "{Base.Border.Disabled}",
+          "type": "color"
+        },
+
+        "Spinner": { "value": "{Base.Brand.Primary}", "type": "color" },
+        "Icon": {
+          "Default": { "value": "{Base.Brand.Primary}", "type": "color" },
+          "Hover": { "value": "{Base.Brand.Primary}", "type": "color" },
+          "Active": { "value": "{Base.Brand.Primary}", "type": "color" },
+          "Disabled": { "value": "{Base.Text.Disabled}", "type": "color" }
+        }
+      },
+
+      "Outline": {
+        "Bg": { "value": "{Base.Background.Default}", "type": "color" },
+        "HoverBg": { "value": "{Base.Overlay.Soft}", "type": "color" },
+        "ActiveBg": { "value": "{Base.Overlay.Medium}", "type": "color" },
+
+        "Text": { "value": "{Base.Brand.Primary}", "type": "color" },
+        "HoverText": { "value": "{Base.Brand.Primary}", "type": "color" },
+        "ActiveText": { "value": "{Base.Brand.Primary}", "type": "color" },
+
+        "Border": { "value": "{Base.Brand.Primary}", "type": "color" },
+        "HoverBorder": { "value": "{Base.Brand.Primary}", "type": "color" },
+        "ActiveBorder": { "value": "{Base.Brand.Primary}", "type": "color" },
+
+        "FocusRing": { "value": "{Base.FocusRing}", "type": "boxShadow" },
+
+        "DisabledBg": { "value": "{Base.Background.Default}", "type": "color" },
+        "DisabledText": { "value": "{Base.Text.Disabled}", "type": "color" },
+        "DisabledBorder": {
+          "value": "{Base.Border.Disabled}",
+          "type": "color"
+        },
+
+        "Spinner": { "value": "{Base.Brand.Primary}", "type": "color" },
+        "Icon": {
+          "Default": { "value": "{Base.Brand.Primary}", "type": "color" },
+          "Hover": { "value": "{Base.Brand.Primary}", "type": "color" },
+          "Active": { "value": "{Base.Brand.Primary}", "type": "color" },
+          "Disabled": { "value": "{Base.Text.Disabled}", "type": "color" }
+        }
+      },
+
+      "Ghost": {
+        "Bg": { "value": "{Base.Background.Default}", "type": "color" },
+        "HoverBg": { "value": "{Base.Overlay.Soft}", "type": "color" },
+        "ActiveBg": { "value": "{Base.Overlay.Medium}", "type": "color" },
+
+        "Text": { "value": "{Base.Brand.Primary}", "type": "color" },
+        "HoverText": { "value": "{Base.Brand.Primary}", "type": "color" },
+        "ActiveText": { "value": "{Base.Brand.Primary}", "type": "color" },
+
+        "Border": { "value": "{Base.Border.Transparent}", "type": "color" },
+
+        "FocusRing": { "value": "{Base.FocusRing}", "type": "boxShadow" },
+
+        "DisabledBg": { "value": "{Base.Background.Default}", "type": "color" },
+        "DisabledText": { "value": "{Base.Text.Disabled}", "type": "color" },
+
+        "Spinner": { "value": "{Base.Brand.Primary}", "type": "color" },
+        "Icon": {
+          "Default": { "value": "{Base.Brand.Primary}", "type": "color" },
+          "Hover": { "value": "{Base.Brand.Primary}", "type": "color" },
+          "Active": { "value": "{Base.Brand.Primary}", "type": "color" },
+          "Disabled": { "value": "{Base.Text.Disabled}", "type": "color" }
+        }
+      },
+
+      "Destructive": {
+        "Bg": { "value": "{Base.Status.Error}", "type": "color" },
+        "HoverBg": { "value": "{Base.Status.Error}", "type": "color" },
+        "ActiveBg": { "value": "{Base.Status.Error}", "type": "color" },
+
+        "Text": { "value": "{Base.Action.OnDefault}", "type": "color" },
+        "HoverText": { "value": "{Base.Action.OnDefault}", "type": "color" },
+        "ActiveText": { "value": "{Base.Action.OnDefault}", "type": "color" },
+
+        "Border": { "value": "{Base.Status.Error}", "type": "color" },
+        "HoverBorder": { "value": "{Base.Status.Error}", "type": "color" },
+        "ActiveBorder": { "value": "{Base.Status.Error}", "type": "color" },
+
+        "FocusRing": { "value": "{Base.FocusRing}", "type": "boxShadow" },
+
+        "DisabledBg": {
+          "value": "{Base.Background.Disabled}",
+          "type": "color"
+        },
+        "DisabledText": { "value": "{Base.Text.Disabled}", "type": "color" },
+        "DisabledBorder": {
+          "value": "{Base.Border.Disabled}",
+          "type": "color"
+        },
+
+        "Spinner": { "value": "{Base.Action.OnDefault}", "type": "color" },
+        "Icon": {
+          "Default": { "value": "{Base.Action.OnDefault}", "type": "color" },
+          "Hover": { "value": "{Base.Action.OnDefault}", "type": "color" },
+          "Active": { "value": "{Base.Action.OnDefault}", "type": "color" },
+          "Disabled": { "value": "{Base.Text.Disabled}", "type": "color" }
+        }
+      },
+
+      "Radius": { "value": "{Base.Radius.Md}", "type": "borderRadius" },
+      "BorderWidth": {
+        "value": "{Base.BorderWidth.Thin}",
+        "type": "borderWidth"
+      },
+
+      "PaddingX": { "value": "{Base.Space.SM}", "type": "spacing" },
+      "PaddingY": { "value": "{Base.Space.XS}", "type": "spacing" },
+      "Gap": { "value": "{Base.Space.XS}", "type": "spacing" },
+
+      "HeightS": { "value": 32, "type": "sizing" },
+      "HeightM": { "value": 40, "type": "sizing" },
+      "HeightL": { "value": 48, "type": "sizing" },
+
+      "MinWidth": { "value": 80, "type": "sizing" },
+
+      "IconSizeS": { "value": 16, "type": "sizing" },
+      "IconSizeM": { "value": 18, "type": "sizing" },
+      "IconSizeL": { "value": 20, "type": "sizing" },
+
+      "PaddingXIconOnly": { "value": "{Base.Space.XS}", "type": "spacing" },
+
+      "Shadow": { "value": "{Base.UIShadowDefault}", "type": "boxShadow" }
+    },
+    "Input": {
+      "Bg": { "value": "{Base.Background.Default}", "type": "color" },
+      "HoverBg": { "value": "{Base.Background.Default}", "type": "color" },
+      "FocusBg": { "value": "{Base.Background.Default}", "type": "color" },
+
+      "Text": { "value": "{Base.Text.Primary}", "type": "color" },
+      "Placeholder": { "value": "{Base.Text.Placeholder}", "type": "color" },
+      "Label": { "value": "{Base.Text.Primary}", "type": "color" },
+      "HelperText": { "value": "{Base.Text.Secondary}", "type": "color" },
+
+      "Border": { "value": "{Base.Border.Default}", "type": "color" },
+      "HoverBorder": { "value": "{Base.Border.Strong}", "type": "color" },
+      "FocusBorder": { "value": "{Base.Border.Focus}", "type": "color" },
+
+      "FocusRing": { "value": "{Base.FocusRing}", "type": "boxShadow" },
+
+      "Disabled": {
+        "Bg": { "value": "{Base.Background.Disabled}", "type": "color" },
+        "Text": { "value": "{Base.Text.Disabled}", "type": "color" },
+        "Border": { "value": "{Base.Border.Disabled}", "type": "color" }
+      },
+
+      "Readonly": {
+        "Bg": { "value": "{Base.Background.Alt}", "type": "color" },
+        "Text": { "value": "{Base.Text.Primary}", "type": "color" },
+        "Border": { "value": "{Base.Border.Default}", "type": "color" }
+      },
+
+      "Icon": {
+        "Default": { "value": "{Base.Icon.Default}", "type": "color" },
+        "Success": { "value": "{Base.Status.Success}", "type": "color" },
+        "Error": { "value": "{Base.Status.Error}", "type": "color" },
+        "Warning": { "value": "{Base.Status.Warning}", "type": "color" },
+        "Info": { "value": "{Base.Status.Info}", "type": "color" }
+      },
+
+      "Validation": {
+        "Error": {
+          "Border": { "value": "{Base.Status.Error}", "type": "color" },
+          "HelperText": { "value": "{Base.Status.Error}", "type": "color" }
+        },
+        "Success": {
+          "Border": { "value": "{Base.Status.Success}", "type": "color" },
+          "HelperText": { "value": "{Base.Status.Success}", "type": "color" }
+        },
+        "Warning": {
+          "Border": { "value": "{Base.Status.Warning}", "type": "color" },
+          "HelperText": { "value": "{Base.Status.Warning}", "type": "color" }
+        },
+        "Info": {
+          "Border": { "value": "{Base.Status.Info}", "type": "color" },
+          "HelperText": { "value": "{Base.Status.Info}", "type": "color" }
+        }
+      },
+
+      "Radius": { "value": "{Base.Radius.Md}", "type": "borderRadius" },
+      "BorderWidth": {
+        "value": "{Base.BorderWidth.Thin}",
+        "type": "borderWidth"
+      },
+      "Shadow": { "value": "{Base.Shadow.Sm}", "type": "boxShadow" },
+
+      "HeightS": { "value": 32, "type": "sizing" },
+      "HeightM": { "value": 40, "type": "sizing" },
+      "HeightL": { "value": 48, "type": "sizing" },
+
+      "PaddingX": { "value": "{Base.Space.SM}", "type": "spacing" },
+      "PaddingY": { "value": "{Base.Space.XS}", "type": "spacing" },
+
+      "Gap": { "value": "{Base.Space.XS}", "type": "spacing" },
+
+      "IconSize": {
+        "S": { "value": "{Base.Icon.Size.SM}", "type": "sizing" },
+        "M": { "value": "{Base.Icon.Size.MD}", "type": "sizing" },
+        "L": { "value": "{Base.Icon.Size.LG}", "type": "sizing" }
+      },
+      "MinWidth": { "value": 240, "type": "sizing" }
+    },
+    "Select": {
+      "Trigger": {
+        "OpenBg": { "value": "{Base.Background.Alt}", "type": "color" },
+        "OpenBorder": { "value": "{Base.Border.Focus}", "type": "color" }
+      }
+    },
+    "Dropdown": {
+      "Menu": {
+        "Bg": {
+          "value": "{Base.Background.Default}",
+          "type": "color"
+        },
+        "Border": {
+          "value": "{Base.Border.Default}",
+          "type": "color"
+        },
+        "Divider": {
+          "value": "{Base.Border.Default}",
+          "type": "color"
+        },
+        "Radius": {
+          "value": "{Base.Radius.Md}",
+          "type": "borderRadius"
+        },
+        "Shadow": {
+          "value": "{Base.Shadow.Md}",
+          "type": "boxShadow"
+        }
+      },
+      "Item": {
+        "Text": {
+          "value": "{Base.Text.Primary}",
+          "type": "color"
+        },
+        "HoverBg": {
+          "value": "{Base.Overlay.Soft}",
+          "type": "color"
+        },
+        "ActiveBg": {
+          "value": "{Base.Action.Active}",
+          "type": "color"
+        },
+        "ActiveTx": {
+          "value": "{Base.Text.Inverse}",
+          "type": "color"
+        },
+        "DisabledTx": {
+          "value": "{Base.Text.Disabled}",
+          "type": "color"
+        }
+      },
+      "Trigger": {
+        "Bg": {
+          "value": "{Input.Bg}",
+          "type": "color"
+        },
+        "HoverBg": {
+          "value": "{Input.HoverBg}",
+          "type": "color"
+        },
+        "FocusBg": {
+          "value": "{Input.FocusBg}",
+          "type": "color"
+        },
+
+        "Text": {
+          "value": "{Input.Text}",
+          "type": "color"
+        },
+        "Placeholder": {
+          "value": "{Input.Placeholder}",
+          "type": "color"
+        },
+
+        "Border": {
+          "value": "{Input.Border}",
+          "type": "color"
+        },
+        "HoverBorder": {
+          "value": "{Input.HoverBorder}",
+          "type": "color"
+        },
+        "FocusBorder": {
+          "value": "{Input.FocusBorder}",
+          "type": "color"
+        },
+
+        "FocusRing": {
+          "value": "{Input.FocusRing}",
+          "type": "boxShadow"
+        },
+
+        "Disabled": {
+          "Bg": {
+            "value": "{Input.Disabled.Bg}",
+            "type": "color"
+          },
+          "Text": {
+            "value": "{Input.Disabled.Text}",
+            "type": "color"
+          },
+          "Border": {
+            "value": "{Input.Disabled.Border}",
+            "type": "color"
+          }
+        },
+
+        "Radius": {
+          "value": "{Input.Radius}",
+          "type": "borderRadius"
+        },
+        "BorderWidth": {
+          "value": "{Input.BorderWidth}",
+          "type": "borderWidth"
+        },
+        "PaddingX": {
+          "value": "{Input.PaddingX}",
+          "type": "spacing"
+        },
+        "PaddingY": {
+          "value": "{Input.PaddingY}",
+          "type": "spacing"
+        }
+      }
+    },
+    "Checkbox": {
+      "BoxBg": { "value": "{Base.Background.Default}", "type": "color" },
+      "BoxBorder": { "value": "{Base.Border.Default}", "type": "color" },
+
+      "HoverBg": { "value": "{Base.Background.Default}", "type": "color" },
+      "HoverBorder": { "value": "{Base.Border.Strong}", "type": "color" },
+
+      "FocusBorder": { "value": "{Base.Border.Focus}", "type": "color" },
+      "FocusRing": { "value": "{Base.FocusRing}", "type": "boxShadow" },
+
+      "DisabledBg": { "value": "{Base.Background.Disabled}", "type": "color" },
+      "DisabledBorder": { "value": "{Base.Border.Disabled}", "type": "color" },
+      "DisabledCheck": { "value": "{Base.Text.Disabled}", "type": "color" },
+      "DisabledLabel": { "value": "{Base.Text.Disabled}", "type": "color" },
+
+      "CheckedBg": { "value": "{Base.Action.Default}", "type": "color" },
+      "CheckedBorder": { "value": "{Base.Action.Default}", "type": "color" },
+      "CheckedCheck": { "value": "{Base.Action.OnDefault}", "type": "color" },
+
+      "HoverCheckedBg": { "value": "{Base.Action.Strong}", "type": "color" },
+      "HoverCheckedBorder": {
+        "value": "{Base.Action.Strong}",
+        "type": "color"
+      },
+      "HoverCheckedCheck": {
+        "value": "{Base.Action.OnDefault}",
+        "type": "color"
+      },
+
+      "FocusCheckedBorder": { "value": "{Base.Border.Focus}", "type": "color" },
+
+      "IndeterminateBg": { "value": "{Base.Action.Default}", "type": "color" },
+      "IndeterminateCheck": {
+        "value": "{Base.Action.OnDefault}",
+        "type": "color"
+      },
+
+      "Label": {
+        "Default": { "value": "{Base.Text.Primary}", "type": "color" },
+        "Disabled": { "value": "{Base.Text.Disabled}", "type": "color" },
+        "Error": { "value": "{Base.Status.Error}", "type": "color" },
+        "Success": { "value": "{Base.Status.Success}", "type": "color" },
+        "Warning": { "value": "{Base.Status.Warning}", "type": "color" },
+        "Info": { "value": "{Base.Status.Info}", "type": "color" }
+      },
+
+      "Semantic": {
+        "Error": {
+          "CheckedBorder": { "value": "{Base.Status.Error}", "type": "color" },
+          "CheckedBg": { "value": "{Base.Status.Error}", "type": "color" },
+          "CheckedCheck": {
+            "value": "{Base.Action.OnDefault}",
+            "type": "color"
+          }
+        },
+        "Success": {
+          "CheckedBorder": {
+            "value": "{Base.Status.Success}",
+            "type": "color"
+          },
+          "CheckedBg": { "value": "{Base.Status.Success}", "type": "color" },
+          "CheckedCheck": {
+            "value": "{Base.Action.OnDefault}",
+            "type": "color"
+          }
+        },
+        "Warning": {
+          "CheckedBorder": {
+            "value": "{Base.Status.Warning}",
+            "type": "color"
+          },
+          "CheckedBg": { "value": "{Base.Status.Warning}", "type": "color" },
+          "CheckedCheck": {
+            "value": "{Base.Action.OnDefault}",
+            "type": "color"
+          }
+        },
+        "Info": {
+          "CheckedBorder": { "value": "{Base.Status.Info}", "type": "color" },
+          "CheckedBg": { "value": "{Base.Status.Info}", "type": "color" },
+          "CheckedCheck": {
+            "value": "{Base.Action.OnDefault}",
+            "type": "color"
+          }
+        }
+      },
+
+      "Size": {
+        "SM": { "value": 16, "type": "sizing" },
+        "MD": { "value": 20, "type": "sizing" }
+      },
+
+      "Radius": { "value": "{Base.Radius.Sm}", "type": "borderRadius" }
+    },
+    "Radio": {
+      "OuterBg": { "value": "{Base.Background.Default}", "type": "color" },
+      "OuterBorder": { "value": "{Base.Border.Default}", "type": "color" },
+      "Dot": { "value": "{Base.Action.Default}", "type": "color" },
+
+      "HoverBorder": { "value": "{Base.Border.Strong}", "type": "color" },
+      "HoverBg": { "value": "{Base.Background.Default}", "type": "color" },
+
+      "HoverSelectedBorder": {
+        "value": "{Base.Action.Strong}",
+        "type": "color"
+      },
+      "HoverSelectedBg": {
+        "value": "{Base.Background.Default}",
+        "type": "color"
+      },
+
+      "FocusBorder": { "value": "{Base.Border.Focus}", "type": "color" },
+      "FocusRing": { "value": "{Base.FocusRing}", "type": "boxShadow" },
+      "FocusSelectedBorder": {
+        "value": "{Base.Border.Focus}",
+        "type": "color"
+      },
+
+      "DisabledBorder": { "value": "{Base.Border.Disabled}", "type": "color" },
+      "DisabledBg": { "value": "{Base.Background.Disabled}", "type": "color" },
+      "DisabledDot": { "value": "{Base.Text.Disabled}", "type": "color" },
+
+      "SelectedBorder": { "value": "{Base.Action.Default}", "type": "color" },
+      "SelectedBg": { "value": "{Base.Background.Default}", "type": "color" },
+      "SelectedDot": { "value": "{Base.Action.Default}", "type": "color" },
+
+      "Label": {
+        "Default": { "value": "{Base.Text.Primary}", "type": "color" },
+        "Disabled": { "value": "{Base.Text.Disabled}", "type": "color" },
+        "Error": { "value": "{Base.Status.Error}", "type": "color" },
+        "Success": { "value": "{Base.Status.Success}", "type": "color" },
+        "Warning": { "value": "{Base.Status.Warning}", "type": "color" },
+        "Info": { "value": "{Base.Status.Info}", "type": "color" }
+      },
+
+      "Semantic": {
+        "Error": {
+          "SelectedBorder": { "value": "{Base.Status.Error}", "type": "color" },
+          "SelectedDot": { "value": "{Base.Action.OnDefault}", "type": "color" }
+        },
+        "Success": {
+          "SelectedBorder": {
+            "value": "{Base.Status.Success}",
+            "type": "color"
+          },
+          "SelectedDot": { "value": "{Base.Action.OnDefault}", "type": "color" }
+        },
+        "Warning": {
+          "SelectedBorder": {
+            "value": "{Base.Status.Warning}",
+            "type": "color"
+          },
+          "SelectedDot": { "value": "{Base.Action.OnDefault}", "type": "color" }
+        },
+        "Info": {
+          "SelectedBorder": { "value": "{Base.Status.Info}", "type": "color" },
+          "SelectedDot": { "value": "{Base.Action.OnDefault}", "type": "color" }
+        }
+      },
+
+      "Size": {
+        "SM": { "value": 16, "type": "sizing" },
+        "MD": { "value": 20, "type": "sizing" }
+      },
+
+      "Radius": { "value": "{Base.Radius.Full}", "type": "borderRadius" }
+    },
+    "Toggle": {
+      "TrackOff": { "value": "{Base.Border.Default}", "type": "color" },
+      "ThumbOff": { "value": "{Base.Background.Inverse}", "type": "color" },
+
+      "TrackOn": { "value": "{Base.Action.Default}", "type": "color" },
+      "ThumbOn": { "value": "{Base.Background.Inverse}", "type": "color" },
+
+      "HoverTrackOff": { "value": "{Base.Border.Strong}", "type": "color" },
+      "HoverThumbOff": {
+        "value": "{Base.Background.Inverse}",
+        "type": "color"
+      },
+
+      "HoverTrackOn": { "value": "{Base.Action.Strong}", "type": "color" },
+      "HoverThumbOn": { "value": "{Base.Background.Inverse}", "type": "color" },
+
+      "FocusTrackOff": { "value": "{Base.Border.Focus}", "type": "color" },
+      "FocusTrackOn": { "value": "{Base.Action.Default}", "type": "color" },
+      "FocusRing": { "value": "{Base.FocusRing}", "type": "boxShadow" },
+
+      "ActiveTrackOff": { "value": "{Base.Border.Strong}", "type": "color" },
+      "ActiveThumbOff": {
+        "value": "{Base.Background.Inverse}",
+        "type": "color"
+      },
+
+      "ActiveTrackOn": { "value": "{Base.Action.Active}", "type": "color" },
+      "ActiveThumbOn": {
+        "value": "{Base.Background.Inverse}",
+        "type": "color"
+      },
+
+      "DisabledTrackOff": {
+        "value": "{Base.Background.Disabled}",
+        "type": "color"
+      },
+      "DisabledTrackOn": {
+        "value": "{Base.Background.Disabled}",
+        "type": "color"
+      },
+      "DisabledThumb": { "value": "{Base.Text.Disabled}", "type": "color" },
+
+      "Semantic": {
+        "Error": {
+          "TrackOn": { "value": "{Base.Status.Error}", "type": "color" },
+          "ThumbOn": { "value": "{Base.Action.OnDefault}", "type": "color" },
+          "Label": { "value": "{Base.Status.Error}", "type": "color" }
+        },
+        "Success": {
+          "TrackOn": { "value": "{Base.Status.Success}", "type": "color" },
+          "ThumbOn": { "value": "{Base.Action.OnDefault}", "type": "color" },
+          "Label": { "value": "{Base.Status.Success}", "type": "color" }
+        },
+        "Warning": {
+          "TrackOn": { "value": "{Base.Status.Warning}", "type": "color" },
+          "ThumbOn": { "value": "{Base.Action.OnDefault}", "type": "color" },
+          "Label": { "value": "{Base.Status.Warning}", "type": "color" }
+        },
+        "Info": {
+          "TrackOn": { "value": "{Base.Status.Info}", "type": "color" },
+          "ThumbOn": { "value": "{Base.Action.OnDefault}", "type": "color" },
+          "Label": { "value": "{Base.Status.Info}", "type": "color" }
+        }
+      },
+
+      "Radius": { "value": "{Base.Radius.Full}", "type": "borderRadius" },
+
+      "Size": {
+        "SM": {
+          "TrackW": { "value": 32, "type": "sizing" },
+          "TrackH": { "value": 18, "type": "sizing" },
+          "Thumb": { "value": 14, "type": "sizing" }
+        },
+        "MD": {
+          "TrackW": { "value": 40, "type": "sizing" },
+          "TrackH": { "value": 24, "type": "sizing" },
+          "Thumb": { "value": 18, "type": "sizing" }
+        }
+      }
+    },
+    "Card": {
+      "Bg": {
+        "value": "{Base.Background.Default}",
+        "type": "color"
+      },
+      "Border": {
+        "value": "{Base.Border.Default}",
+        "type": "color"
+      },
+      "Radius": {
+        "value": "{Base.Radius.Md}",
+        "type": "borderRadius"
+      },
+      "Shadow": {
+        "value": "{Base.Shadow.Sm}",
+        "type": "boxShadow"
+      },
+      "HoverBg": {
+        "value": "{Base.Background.Alt}",
+        "type": "color"
+      },
+      "SelectedBr": {
+        "value": "{Base.Border.Focus}",
+        "type": "color"
+      }
+    },
+    "Modal": {
+      "Bg": {
+        "value": "{Base.Background.Default}",
+        "type": "color"
+      },
+      "Text": {
+        "value": "{Base.Text.Primary}",
+        "type": "color"
+      },
+      "Border": {
+        "value": "{Base.Border.Default}",
+        "type": "color"
+      },
+      "Overlay": {
+        "value": "{Base.Overlay.Strong}",
+        "type": "color"
+      },
+      "Radius": {
+        "value": "{Base.Radius.Lg}",
+        "type": "borderRadius"
+      },
+      "Shadow": {
+        "value": "{Base.Shadow.Lg}",
+        "type": "boxShadow"
+      }
+    },
+    "Tooltip": {
+      "Bg": {
+        "value": "{Base.Background.Inverse}",
+        "type": "color"
+      },
+      "Text": {
+        "value": "{Base.Text.Inverse}",
+        "type": "color"
+      },
+      "Border": {
+        "value": "{Base.Border.Default}",
+        "type": "color"
+      },
+      "Shadow": {
+        "value": "{Base.Shadow.Sm}",
+        "type": "boxShadow"
+      }
+    },
+    "Badge": {
+      "Bg": {
+        "value": "{Base.Background.Default}",
+        "type": "color"
+      },
+      "Text": {
+        "value": "{Base.Text.Primary}",
+        "type": "color"
+      },
+      "Success": {
+        "value": "{Base.Status.Success}",
+        "type": "color"
+      },
+      "Warning": {
+        "value": "{Base.Status.Warning}",
+        "type": "color"
+      },
+      "Error": {
+        "value": "{Base.Status.Error}",
+        "type": "color"
+      },
+      "Info": {
+        "value": "{Base.Status.Info}",
+        "type": "color"
+      },
+      "Border": {
+        "value": "{Base.Border.Default}",
+        "type": "color"
+      }
+    },
+    "Pagination": {
+      "ActiveBg": {
+        "value": "{Base.Action.Default}",
+        "type": "color"
+      },
+      "ActiveTx": {
+        "value": "{Base.Text.Inverse}",
+        "type": "color"
+      },
+      "DefaultBg": {
+        "value": "{Base.Background.Default}",
+        "type": "color"
+      },
+      "DefaultTx": {
+        "value": "{Base.Text.Primary}",
+        "type": "color"
+      },
+      "Border": {
+        "value": "{Base.Border.Default}",
+        "type": "color"
+      },
+      "HoverBg": {
+        "value": "{Base.Action.Hover}",
+        "type": "color"
+      },
+      "DisabledTx": {
+        "value": "{Base.Text.Disabled}",
+        "type": "color"
+      },
+      "FocusRing": {
+        "value": "{Base.FocusRing}",
+        "type": "boxShadow"
+      }
+    },
+    "Navbar": {
+      "Bg": {
+        "value": "{Base.Background.Default}",
+        "type": "color"
+      },
+      "Text": {
+        "value": "{Base.Text.Primary}",
+        "type": "color"
+      },
+      "Border": {
+        "value": "{Base.Border.Default}",
+        "type": "color"
+      },
+      "Shadow": {
+        "value": "{Base.Shadow.Sm}",
+        "type": "boxShadow"
+      },
+      "FocusRing": {
+        "value": "{Base.FocusRing}",
+        "type": "boxShadow"
+      }
+    }
+  }
+}
