@@ -14,6 +14,8 @@
 
   "Brand": {
     "Primary": { "value": "#4b2e2a", "type": "color" },
+    "PrimaryHover": { "value": "#422824", "type": "color" },
+    "PrimaryActive": { "value": "#3d2522", "type": "color" },
     "Secondary": { "value": "#f2a6b3", "type": "color" },
     "Tertiary": { "value": "#ffe29a", "type": "color" }
   },

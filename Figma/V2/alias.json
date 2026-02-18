@@ -138,5 +138,11 @@
   "UIShadowMd": { "value": "{Elevation.MD}", "type": "boxShadow" },
   "UIShadowLg": { "value": "{Elevation.LG}", "type": "boxShadow" },
   "UIShadowDefault": { "value": "{Elevation.MD}", "type": "boxShadow" },
-  "UIShadowStrong": { "value": "{Elevation.Strong}", "type": "boxShadow" }
+  "UIShadowStrong": { "value": "{Elevation.Strong}", "type": "boxShadow" },
+
+  "BrandPrimary": { "value": "{Brand.Primary}", "type": "color" },
+  "BrandSecondary": { "value": "{Brand.Secondary}", "type": "color" },
+  "BrandTertiary": { "value": "{Brand.Tertiary}", "type": "color" },
+  "BrandSecondaryHover": { "value": "{Brand.Secondary}", "type": "color" },
+  "BrandSecondaryActive": { "value": "{Brand.Secondary}", "type": "color" }
 }
